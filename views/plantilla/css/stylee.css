@@ -1,0 +1,204 @@
+/*footer*/
+
+#footer {
+    width: auto;
+    height: 400px;
+    background: #413FB6;
+    margin-top: 0px;
+}
+
+#foot {
+    width: auto;
+    height: 400px;
+    background: red;
+    margin-top: 0px;
+
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem;
+}
+
+.menu-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 30rem;
+    gap: 3rem;
+    justify-items: center;
+}
+
+.title-footer {
+    font-weight: 100;
+    font-size: 1rem;
+    color: white;
+
+}
+
+.contact-info img {
+    width: 30px;
+    height: 30px;
+}
+
+.newsletter img {
+    width: 60px;
+    height: 50px;
+    padding: 5px;
+}
+
+.info a {
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+}
+
+.info ul {
+
+    list-style-type: none;
+    margin-left: -27px;
+}
+
+.offcanvas {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.navbar-nav .nav-link:hover {
+
+    background-color: #DEDEF6;
+    border-radius: 8px;
+    margin-left: 5px;
+    padding-left: 15px;
+}
+
+.pagination {
+    background-color: #F7F7F7;
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+
+}
+
+.estrella.active {
+    filter: invert(300%);
+   
+    
+  }
+  .estrella {
+    cursor: pointer; 
+    
+  }
+  
+.inf img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+.inf-b button{
+    width: 40%;
+    height: 50px;
+    border-radius: 5px;
+    background: #413FB6;
+    color: white;
+    border: none;
+}
+.inf-b a{
+    text-decoration: none;
+    color: white;
+}
+.inf{
+    width: auto;
+    height: 125px;
+    border: 1px solid black;
+    margin:0px;
+    display: flex;
+    align-items: center;
+    border: none;
+  }
+  .inf-b{
+    width: 70%;
+    height: 125px;
+    border: 1px solid black;
+    margin:0px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid #DCDADA;
+  }
+
+  .inf-b input{
+    width: 100px;
+    height: 46px;
+    margin: 20px;
+    border: 1px solid #DCDBDA;
+    border-radius: 5px;
+    text-align: center;
+
+  }
+
+  #favv{
+    width: 35px;
+    height:35px ;
+    background-color: #ECECEE ;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 50%;
+
+}
+
+#favv:hover{
+    background-color:black ;
+}
+#favv img{
+    width: 25px;
+    height: 26px;
+    margin-bottom:0px;
+    margin-top:5px;
+}
+.text-center{
+    display: flex;
+    justify-content: space-between;
+  }
+  .icon-zoom:hover {
+    transform: scale(1.6); 
+    transition: transform 0.2s ease; 
+}
+.card{
+    transition: all 400ms ease;
+ }
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-1%);
+}
+.cart-badge {
+    position: absolute;
+    top: -15px; 
+    right:22px; 
+    background-color: #B7B8F6;
+    color: white;
+    border-radius: 50%; 
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.cart-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+
+.cart-link:hover .cart-badge {
+    opacity: 0; 
+}
+
+.cart-badge::after {
+    content: ''; 
+}
+
+
+
+  
