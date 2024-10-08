@@ -84,7 +84,7 @@
 
             <div class="col-lg-3 col-md-4 col-sm-6 p-2">
                 <div class="card" style="min-height: 700px;">
-                   <a href="contenido/detalle.html"><img src="https://plazavea.vteximg.com.br/arquivos/ids/29227295-1000-1000/20394528.jpg?v=638567137253600000"
+                   <a href="<?php echo BASE_URL ?>detalle"><img src="https://plazavea.vteximg.com.br/arquivos/ids/29227295-1000-1000/20394528.jpg?v=638567137253600000"
                     class="card-img-top w-100" alt="..." style="height: 400px;"></a> 
                     <div class="card-body">
                         <h5 class="card-title">LENOVO</h5>
