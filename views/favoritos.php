@@ -8,8 +8,9 @@
                         <p>Tablet Samsung Galaxy Tab S9+ FE 12.4" 8GB RAM 128GB SM-X610NZADPEO Gray</p>
                     </div>
     
-                    <div id="precio" class="col-1 p-0 h-100"><input id="precio_p1" type="hidden" value="30"
-                            readonly>S/.30.00</div>
+                    <div id="precio" class="col-1 p-0 h-100">}
+                        <input id="precio_p1" type="hidden" value="30" readonly>S/.30.00
+                    </div>
                     <div id="cantidad" class="col-3 p-4 h-100 row">
                        <p>En stock</p>
                     </div>
