@@ -47,7 +47,7 @@
 
                         </li>
                         <li class="nav-item me-3"> 
-                            <a href="login.html"><i class="fas fa-user fa-lg icon-zoom"
+                            <a href="<?php echo BASE_URL ?>login"><i class="fas fa-user fa-lg icon-zoom"
                                     style="margin-right: 15px;color: white;"></i>
                             </a>
 
