@@ -1384,7 +1384,7 @@ transition-property: transform;
     margin-bottom: 5px;
 }
 .product-stock {
-    color: #4CAF50;
+    color: #290db4;
     font-size: 0.9em;
 }
 .product-meta {
@@ -1392,7 +1392,7 @@ transition-property: transform;
     font-size: 0.8em;
 }
 .add-to-cart {
-    background-color: #4CAF50;
+    background-color: #0e46d2;
     color: white;
     border: none;
     padding: 5px 10px;
