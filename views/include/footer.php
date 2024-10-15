@@ -56,14 +56,8 @@
 
 </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="mensaje"]'));
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-</script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
@@ -76,6 +70,13 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	coontainer.classList.remove("right-panel-active");
 });
+</script>
+
+<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="mensaje"]'));
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 </script>
 
 <script>
@@ -100,6 +101,16 @@ signInButton.addEventListener('click', () => {
         var subtotal = precio * cantidad;
         document.getElementById('subtotal').innerHTML = 'S/. ' + subtotal;
     }
+</script>
+
+<script>
+    const estrellas = document.querySelectorAll('.estrella');
+
+    estrellas.forEach((estrella) => {
+        estrella.addEventListener('click', () => {
+            estrella.classList.toggle('active');
+        });
+    });
 </script>
 
 </html>

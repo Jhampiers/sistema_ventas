@@ -1,4 +1,4 @@
-<div id="cajaaa">
+        <div id="cajaaa">
             <div id="detalle_producto" class="col-12 row m-0 container-fluid p-0">
                 <h4 style="display: flex;justify-content: center;" class="text-center">Detalles de Producto</h4>
                 <div id="imagenes_productos" class="col-6 row m-0">
@@ -7,21 +7,21 @@
                             alt="" class="w-100 h-100">
                     </div>
                     <div class="col-4" style="height: 150px;border: 2px solid  rgb(152, 151, 151);">
-                        <img src="https://m.media-amazon.com/images/I/71t8DILcDEL._AC_SX466_.jpg"
-                            alt="" class="w-100 h-100">
+                        <img src="https://m.media-amazon.com/images/I/71t8DILcDEL._AC_SX466_.jpg" alt=""
+                            class="w-100 h-100">
                     </div>
                     <div class="col-4" style="height: 150px;border: 2px solid  rgb(152, 151, 151);">
-                        <img src="https://m.media-amazon.com/images/I/71LC8fLDUqL._AC_SX466_.jpg"
-                            alt="" class="w-100 h-100">
+                        <img src="https://m.media-amazon.com/images/I/71LC8fLDUqL._AC_SX466_.jpg" alt=""
+                            class="w-100 h-100">
                     </div>
                     <div class="col-4" style="height: 150px;border: 2px solid rgb(152, 151, 151);">
-                        <img src="https://m.media-amazon.com/images/I/71VQEewcXwL._AC_SX466_.jpg"
-                            alt="" class="w-100 h-100">
+                        <img src="https://m.media-amazon.com/images/I/71VQEewcXwL._AC_SX466_.jpg" alt=""
+                            class="w-100 h-100">
                     </div>
 
                 </div>
                 <div id="detalles" class="col-6 p-2" style="height: 750px;width:745px;">
-                    
+
                     <div id="datoss" style="margin-top: 20px;">
                         <div class="inf">
 
@@ -263,3 +263,4 @@
 
             </div>
         </div>
+
