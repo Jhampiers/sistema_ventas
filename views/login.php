@@ -1,1 +1,23 @@
 
+<div class="formulario">
+        <form>
+            <div class="imgg"> <img src="../img/logol.png" alt="" width="260" height="80" style="margin-bottom:5px;">
+                <a href=""><img src="../img/equis.png" alt="" width="25px" height="25px"></a>
+            </div>
+            <h1>¡Bienvenido de Nuevo!</h1>
+            <div class="usuario">
+                <label>Correo electronico</label>
+                <input class="icono" type="text" placeholder="    ingrese su correo">
+            </div>
+            <div class="contraseña">
+                <label>Contraseña</label>
+                <input type="password" placeholder="    ingrese su contraseña">
+            </div>
+            <div class="recordar">
+                <a href="#">¿Olvidaste la contraseña</a>
+            </div>
+            <button class="but" type="submit"><a class="btt" href="../index.html">Iniciar Sesión</a></button>
+            <button class="but">Ingresar con Google</button>
+            <div class="crear"><a href="#">Crear cuenta</a></div>
+        </form>
+    </div>
