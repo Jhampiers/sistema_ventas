@@ -2,25 +2,24 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Celulares</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="<?php echo BASE_URL ?>views/plantilla/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novatec</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL ?>views/plantilla/css/style.css">
+    <link rel="icon" href="img/Pes...ico">
 </head>
 <script src="https://kit.fontawesome.com/f244ab63ac.js" crossorigin="anonymous"></script>
 
-
 <body>
-	<div id="cont">
-		<div id="menus">
-			<nav class="navbar navbar-dark fixed-top"
+    <div class="container-fluid p-0">
+
+        <nav class="navbar navbar-dark fixed-top"
             style="background-color:#413FB6 ; height: 145px;box-sizing:content-box;">
             <div class="container-fluid">
-                
+             
                 <a class="navbar-brand d-none d-lg-block" href="<?php echo BASE_URL ?>index">
-                    <img src="./views/plantilla/img/logo.png" alt="Bootstrap" width="300px" height="100px">
+                    <img src="./views/plantilla/img/logo.png" alt="Bootstrap" width="350px" height="100px">
                 </a>
 
                 <button class="navbar-toggler" style="color: #413FB6 ;" type="button" data-bs-toggle="offcanvas"
@@ -29,6 +28,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+               
                 <div class="d-flex justify-content-end align-items-center flex-grow-1">
                     
                     <form class="d-flex mt-3 me-0" style="width:60%;margin-bottom:20px">
@@ -38,7 +38,6 @@
                             type="submit">Buscar</button>
                     </form>
 
-                   
                     <ul class="navbar-nav d-flex flex-row" style="margin-left:60px;margin-top:-5px;">
                         <li class="nav-item me-3"> 
                             <a href="<?php echo BASE_URL ?>favoritos"><i class="fas fa-bookmark fa-lg icon-zoom"
@@ -46,24 +45,24 @@
                             </a>
 
                         </li>
-                        <li class="nav-item me-3"> 
+                        <li class="nav-item me-3">
                             <a href="<?php echo BASE_URL ?>login"><i class="fas fa-user fa-lg icon-zoom"
                                     style="margin-right: 15px;color: white;"></i>
                             </a>
 
                         </li>
-						<li class="nav-item me-3">
+                        <li class="nav-item me-3">
                             <a href="<?php echo BASE_URL ?>carrito" class="cart-link" style="position: relative; display: inline-block;">
                                 <i class="fas fa-shopping-cart fa-lg icon-zoom" style="color: white;margin-right:40px;"></i>
                                 <span class="cart-badge">0</span>
                             </a>
                         </li>
+                        
                     </ul>
 
 
                 </div>
 
-               
                 <div class="offcanvas offcanvas-start " style="background-color: white;" tabindex="-1"
                     id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header" style="background-color: #413FB6;height:70px;">
@@ -102,5 +101,4 @@
             </div>
         </nav>
 
-		</div>
 	

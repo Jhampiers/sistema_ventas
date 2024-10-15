@@ -98,7 +98,7 @@
                             <a href="contenido/carrito.html" class="btn btn-primary">Añadir a Carrito</a>
                             <div id="favv">
                                 <a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-                                    href="contenido/favoritos.html"><img src="./views/plantilla/img/favorito.png" alt=""></a>
+                                    href="contenido/favoritos.html"><img src="img/favorito.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                             <a href="contenido/carrito.html" class="btn btn-primary">Añadir a Carrito</a>
                             <div id="favv">
                                 <a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-                                    href="contenido/favoritos.html"><img src="./views/plantilla/img/favorito.png" alt=""></a>
+                                    href="contenido/favoritos.html"><img src="img/favorito.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                             <a href="contenido/carrito.html" class="btn btn-primary">Añadir a Carrito</a>
                             <div id="favv">
                                 <a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-                                    href="contenido/favoritos.html"><img src="./views/plantilla/img/favorito.png" alt=""></a>
+                                    href="contenido/favoritos.html"><img src="img/favorito.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -166,11 +166,12 @@
                             <a href="contenido/carrito.html" class="btn btn-primary">Añadir a Carrito</a>
                             <div id="favv">
                                 <a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-                                    href="contenido/favoritos.html"><img src="./views/plantilla/img/favorito.png" alt=""></a>
+                                    href="contenido/favoritos.html"><img src="img/favorito.png" alt=""></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+       
        

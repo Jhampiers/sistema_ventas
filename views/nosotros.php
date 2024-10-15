@@ -1,4 +1,4 @@
-<div id="nosotros" style="margin-top:150px;">
+        <div id="nosotros" style="margin-top:150px;">
 			<div class="titulo">
 				<p><b>Acerca de NOVATEC</b></p>
 			</div>

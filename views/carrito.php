@@ -1,6 +1,6 @@
 <div class="w-100 row m-0">
 
-<div id="productos" class="w-75" style="min-height: 900px;padding-top:30px;margin-top:160px;">
+<div  class="w-75" style="min-height: 900px;padding-top:30px;margin-top:160px;">
     <h5 class="text-center" style="display: flex;justify-content:start;color: blue;">CARRITO</h5>
     <div class="card w-100 row m-0 mb-1" style="height: 120px;">
         <img src="https://topesdegama.com/app/uploads-topesdegama.com/2022/12/tablets-para-regalar-lenovo-tab-p11-e1706788173785.jpg?x=480&quality=40"
