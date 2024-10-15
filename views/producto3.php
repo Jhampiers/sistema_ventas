@@ -92,7 +92,7 @@
 			<div class="col-lg-3  col-md-4 col-ms-6 p-2">
 				<div class="card" style="min-height:500px;">
 					<a href="detalle.html"><img
-							src="https://falabella.scene7.com/is/image/FalabellaPE/120783891_1?wid=800&hei=800&qlt=70"
+							src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17084616_1/w=800,h=800,fit=pad"
 							class="card-img-top w-100" alt="..."
 							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
 					<div class="card-body">

@@ -1,4 +1,4 @@
-        <div id="cajaaa">
+        <div id="cajaaa" style="margin-top:170px;" >
             <div id="detalle_producto" class="col-12 row m-0 container-fluid p-0">
                 <h4 style="display: flex;justify-content: center;" class="text-center">Detalles de Producto</h4>
                 <div id="imagenes_productos" class="col-6 row m-0">
@@ -31,10 +31,10 @@
                             </p>
                         </div>
                         <div class="inf">
-                            <img src="../img/estrella.png" alt="" class="estrella">
-                            <img src="../img/estrella.png" alt="" class="estrella">
-                            <img src="../img/estrella.png" alt="" class="estrella">
-                            <img src="../img/estrella.png" alt="" class="estrella">
+                            <img src="./views/plantilla/img/estrella.png" alt="" class="estrella">
+                            <img src="./views/plantilla/img/estrella.png" alt="" class="estrella">
+                            <img src="./views/plantilla/img/estrella.png" alt="" class="estrella">
+                            <img src="./views/plantilla/img/estrella.png" alt="" class="estrella">
 
                         </div>
                         <div class="inf-b">
@@ -53,7 +53,7 @@
                 </div>
                 <div id="accordionExample" class="accordion col-12 p-2   mb-2">
                     <div class="accordion-item">
-                        <h2 class="accordion-header">
+                        <h2 class="accordion-header" style="margin:0px;">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Más detalles del Producto
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header">
+                        <h2 class="accordion-header" style="margin:0px;">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Ficha Técnica
@@ -180,7 +180,7 @@
                                 <a href="carrito.html" class="btn btn-primary">Añadir a Carrito</a>
                                 <div id="favv">
                                     <a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-                                        href="favoritos.html"><img src="../img/favorito.png" alt=""></a>
+                                        href="favoritos.html"><img src="./views/plantilla/img/favorito.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -205,7 +205,7 @@
                                 <a href="carrito.html" class="btn btn-primary">Añadir a Carrito</a>
                                 <div id="favv">
                                     <a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-                                        href="favoritos.html"><img src="../img/favorito.png" alt=""></a>
+                                        href="favoritos.html"><img src="./views/plantilla/img/favorito.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -229,7 +229,7 @@
                                 <a href="carrito.html" class="btn btn-primary">Añadir a Carrito</a>
                                 <div id="favv">
                                     <a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-                                        href="favoritos.html"><img src="../img/favorito.png" alt=""></a>
+                                        href="favoritos.html"><img src="./views/plantilla/img/favorito.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                                 <a href="carrito.html" class="btn btn-primary">Añadir a Carrito</a>
                                 <div id="favv">
                                     <a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-                                        href="favoritos.html"><img src="../img/favorito.png" alt=""></a>
+                                        href="favoritos.html"><img src="./views/plantilla/img/favorito.png" alt=""></a>
                                 </div>
                             </div>
                         </div>

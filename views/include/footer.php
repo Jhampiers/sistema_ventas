@@ -42,9 +42,9 @@
 			<div class="newsletter">
 				<p class="title-footer"><b>Siguenos en</b></p>
 				<a href="https://www.facebook.com/"><img
-						src="img/face.png" alt=""></a>
-				<a href="https://www.youtube.com/?app=desktop&hl=es"><img src="img/youtu.png" alt=""></a>
-				<a href="https://www.instagram.com/"><img src="img/insta.png" alt=""></a>
+						src="./views/plantilla/img/face.png" alt=""></a>
+				<a href="https://www.youtube.com/?app=desktop&hl=es"><img src="./views/plantilla/img/youtu.png" alt=""></a>
+				<a href="https://www.instagram.com/"><img src="./views/plantilla/img/insta.png" alt=""></a>
 			</div>
 		</div>
 
