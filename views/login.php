@@ -20,4 +20,4 @@
             <button class="but">Ingresar con Google</button>
             <div class="crear"><a href="#">Crear cuenta</a></div>
         </form>
-    </div>
+</div>
