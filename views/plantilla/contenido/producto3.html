@@ -2,473 +2,410 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Laptops</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="img/Pes...ico">
 </head>
 <script src="https://kit.fontawesome.com/f244ab63ac.js" crossorigin="anonymous"></script>
 
 <body>
-	<div id="cont">
-		<div id="menus">
-			<nav class="navbar navbar-dark fixed-top"
-				style="background-color:#413FB6 ; height: 145px;box-sizing:content-box;">
-				<div class="container-fluid">
-					
-					<a class="navbar-brand d-none d-lg-block" href="../index.html">
-						<img src="../img/logo.png" alt="Bootstrap" width="300px" height="100px">
-					</a>
+    <div class="container-fluid p-0">
 
-					<button class="navbar-toggler" style="color: #413FB6 ;" type="button" data-bs-toggle="offcanvas"
-						data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-						aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+        <nav class="navbar navbar-dark fixed-top"
+            style="background-color:#413FB6 ; height: 145px;box-sizing:content-box;">
+            <div class="container-fluid">
+             
+                <a class="navbar-brand d-none d-lg-block" href="../index.html">
+                    <img src="../img/logo.png" alt="Bootstrap" width="350px" height="100px">
+                </a>
 
-					
-					<div class="d-flex justify-content-end align-items-center flex-grow-1">
-						
-						<form class="d-flex mt-3 me-0" style="width:60%;margin-bottom:20px">
-							<input class="form-control me-2" type="search" placeholder="¿Queestas buscando?"
-								aria-label="Search">
-							<button style="border-color:#DCDCDC ;color: #B8B8B8 ;" class="btn btn-outline-primary"
-								type="submit">Buscar</button>
-						</form>
+                <button class="navbar-toggler" style="color: #413FB6 ;" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-						
-						<ul class="navbar-nav d-flex flex-row" style="margin-left:60px;margin-top:-5px;">
-							<li class="nav-item me-3">
-								<a href="favoritos.html"><i class="fas fa-bookmark fa-lg icon-zoom"
-										style="margin-right: 15px;color: white;"></i>
-								</a>
+               
+                <div class="d-flex justify-content-end align-items-center flex-grow-1">
+                    
+                    <form class="d-flex mt-3 me-0" style="width:60%;margin-bottom:20px">
+                        <input class="form-control me-2" type="search" placeholder="¿Queestas buscando?"
+                            aria-label="Search">
+                        <button style="border-color:#DCDCDC ;color: #B8B8B8 ;" class="btn btn-outline-primary"
+                            type="submit">Buscar</button>
+                    </form>
 
-							</li>
-							<li class="nav-item me-3"> 
-								<a href="login.html"><i class="fas fa-user fa-lg icon-zoom"
-										style="margin-right: 15px;color: white;"></i>
-								</a>
+                    <ul class="navbar-nav d-flex flex-row" style="margin-left:60px;margin-top:-5px;">
+                        <li class="nav-item me-3"> 
+                            <a href="favoritos.html"><i class="fas fa-bookmark fa-lg icon-zoom"
+                                    style="margin-right: 15px;color: white;"></i>
+                            </a>
 
-							</li>
-							<li class="nav-item me-3">
-								<a href="contenido/carrito.html" class="cart-link" style="position: relative; display: inline-block;">
-									<i class="fas fa-shopping-cart fa-lg icon-zoom" style="color: white;margin-right:40px;"></i>
-									<span class="cart-badge">0</span>
-								</a>
-							</li>
-						</ul>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a href="login.html"><i class="fas fa-user fa-lg icon-zoom"
+                                    style="margin-right: 15px;color: white;"></i>
+                            </a>
+
+                        </li>
+                        <li class="nav-item me-3">
+                            <a href="carrito.html" class="cart-link" style="position: relative; display: inline-block;">
+                                <i class="fas fa-shopping-cart fa-lg icon-zoom" style="color: white;margin-right:40px;"></i>
+                                <span class="cart-badge">0</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
 
 
-					</div>
+                </div>
 
-					
-					<div class="offcanvas offcanvas-start " style="background-color: white;" tabindex="-1"
-						id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-						<div class="offcanvas-header" style="background-color: #413FB6;height:70px;">
+                <div class="offcanvas offcanvas-start " style="background-color: white;" tabindex="-1"
+                    id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header" style="background-color: #413FB6;height:70px;">
 
-							<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-								aria-label="Close"></button>
-						</div>
-						<div class="offcanvas-body">
-							<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Categorias</h5>
-							<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-								<li class="nav-item">
-									<a style="color: black;" class="nav-link active" aria-current="page"
-										href="producto.html">Celulares</a>
-								</li>
-								<li class="nav-item">
-									<a style="color: black;" class="nav-link active" aria-current="page"
-										href="producto3.html">Laptops</a>
-								</li>
-								<li class="nav-item">
-									<a style="color: black;" class="nav-link active" aria-current="page"
-										href="producto2.html">Accesorios</a>
-								</li>
-								<li class="nav-item">
-									<a style="color: black;" class="nav-link active" aria-current="page"
-										href="contacto.html">Contactanos</a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Categorias</h5>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a style="color: black;" class="nav-link active" aria-current="page"
+                                    href="producto.html">Celulares</a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="color: black;" class="nav-link active" aria-current="page"
+                                    href="producto3.html">Laptops</a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="color: black;" class="nav-link active" aria-current="page"
+                                    href="producto2.html">Accesorios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="color: black;" class="nav-link active" aria-current="page"
+                                    href="contacto.html">Contactanos</a>
 
-								</li>
-								<li class="nav-item">
-									<a style="color: black;" class="nav-link active" aria-current="page"
-										href="Nosotros.html">Nosotros</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+                            </li>
+                            <li class="nav-item">
+                                <a style="color: black;" class="nav-link active" aria-current="page"
+                                    href="Nosotros.html">Nosotros</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-				</div>
-			</nav>
-
-		</div>
-
-		<div id="ordenar" class="container-fluid row" style="margin-top:120px;">
+            </div>
+        </nav>
+        <div id="ordenar" class="container-fluid row" style="margin-top:120px;">
 			<div class="caja col-12">
 				<nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
 					<ul class="nav nav-pills">
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-								aria-expanded="false" style="color: black;">Seleccionar</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#scrollspyHeading3">por popularidad</a></li>
-								<li><a class="dropdown-item" href="#scrollspyHeading4">por precio</a></li>
-								<li><a class="dropdown-item" href="#scrollspyHeading4">por puntuacion</a></li>
-							</ul>
-						</li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color: black;">Seleccionar</a>
+						<ul class="dropdown-menu">
+						  <li><a class="dropdown-item" href="#scrollspyHeading3">por popularidad</a></li>
+						  <li><a class="dropdown-item" href="#scrollspyHeading4">por precio</a></li>
+						  <li><a class="dropdown-item" href="#scrollspyHeading4">por puntuacion</a></li>
+						</ul>
+					  </li>
 					</ul>
-				</nav>
+				  </nav>
 			</div>
 		</div>
 		<div id="productoss">
 			<div class="container-fluid m-0 p-5 mt-0 row ">
 				<div class="col-lg-3 offset-md-0 col-md-4 col-ms-6 p-2 ">
+					<div class="card"  style="min-height:500px;">
+						<a href="detalle.html"><img src="https://oechsle.vteximg.com.br/arquivos/ids/15989584-1000-1000/20355393--1-.jpg?v=638279804571770000" class="card-img-top w-100" alt="..." style="height: 300px;width: 40%;display: block; margin: 0 auto;padding: 10px;">
+							<div class="card-body"></a>
+							<h5 class="card-title">Laptop HP</h5>
+							<p class="card-text">Celular Samsung Galaxy A54 5G 256GB 8GB RAM Negro <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-ms-6 p-2">
 					<div class="card" style="min-height:500px;">
-						<a href="detalle.html"><img
-								src="https://plazavea.vteximg.com.br/arquivos/ids/25699586/20254058.jpg?v=638114400801430000"
-								class="card-img-top w-100" alt="..."
-								style="height: 300px;width: 40%;display: block; margin: 0 auto;padding: 10px;">
-							<div class="card-body">
-						</a>
-						<h5 class="card-title">HP</h5>
-						<p class="card-text">Laptop HP EliteBook 850 G8 15.6" FHD Intel Core i7 16GB RAM 512GB SSD
-                            Windows 10 Pro <br>
-							S/2,444.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+						<a href="detalle.html"><img src="https://rymportatiles.com.pe/cdn/shop/files/HP-240-G10-1.png?v=1721691675&width=1214" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;"></a>
+						<div class="card-body">
+							<h5 class="card-title">HP</h5>
+							<p class="card-text">Celular Honor X7B 6.8" 8GB RAM 256GB Verde <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img src="https://oechsle.vteximg.com.br/arquivos/ids/10801310-1500-1500/image-
-							ab521bf6a191466b8f38ca52696d8ab6.jpg?v=637970041654370000" class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 20px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">HP</h5>
-						<p class="card-text">Laptop HP Pavilion 15.6" Full HD, Intel Core i5, 8GB RAM, 512GB SSD.<br>
-							S/2,444.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+				<div class="col-lg-3 col-md-4 col-ms-6 p-2">
+					<div class="card" style="min-height:500px;">
+						<a href="detalle.html"><img src="https://i5.walmartimages.com/seo/HP-Stream-14-inch-Laptop-Intel-Processor-N4102-4GB-RAM-64GB-eMMC-Pink-12-mo-Microsoft-365-included_2a324b45-001a-4877-b01f-3ff91b5e431b.c579ce38dcd4b9daa0196bbc4a123788.jpeg" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
+						<div class="card-body">
+							<h5 class="card-title">HP</h5>
+							<p class="card-text">Celular Samsung Galaxy A54 5G 256GB 8GB RAM Negro <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img
-							src="https://plazavea.vteximg.com.br/arquivos/ids/28629226-512-512/image-d0253f5633be48fc8a03c07c21a77836.jpg"
-							class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">HP</h5>
-						<p class="card-text"> ThinkPad X1 Carbon, 14" WQHD, Intel Core i7, 16GB RAM, 512GB SSD.<br>
-							S/7,000
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+				<div class="col-lg-3  col-md-4 col-ms-6 p-2">
+					<div class="card" style="min-height:500px;">
+						<a href="detalle.html"><img src="https://metroio.vtexassets.com/arquivos/ids/510616-800-auto?v=638423197923330000&width=800&height=auto&aspect=true" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
+						<div class="card-body">
+							<h5 class="card-title">HP</h5>
+							<p class="card-text">Celular Xiaomi Redmi Note 11 4GB +128GB TWILIGHT<br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3  col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img
-							src="https://falabella.scene7.com/is/image/FalabellaPE/120783891_1?wid=800&hei=800&qlt=70"
-							class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">LENOVO</h5>
-						<p class="card-text">Laptop Lenovo ThinkPad X1 Carbon, 14" WQHD, Intel Core i7, 16GB RAM, 512GB SSD.<br>
-							S/3,444.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+				<div class="col-lg-3 offset-md-0 col-md-4 col-ms-6 p-2">
+					<div class="card" style="min-height:500px;">
+						<a href="detalle.html"><img src="https://rymportatiles.com.pe/cdn/shop/files/Lenovo-ThinkPad-T14-Gen-2-1.png?v=1721404246&width=1214" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
+						<div class="card-body">
+							<h5 class="card-title">LENOVO</h5>
+							<p class="card-text">Celular Redmi Note A54 5G 256GB 8GB RAM Negro <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 offset-md-0 col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKdOwwriUKSG0t1qlji6RjNWPAuKvIIiiEfeP9tVX_JT9R4d8fS5eq7dm3GMi7K8YM6nE&usqp=CAU"
-							class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">ACER</h5>
-						<p class="card-text">Laptop Acer Swift 5, 15.6" Full HD, Intel Core i7, 16GB RAM, 512GB SSD.<br>
-							S/2,444.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+				<div class="col-lg-3 col-md-4 col-ms-6 p-2">
+					<div class="card" style="min-height:500px;">
+						<a href="detalle.html"><img src="https://coolboxpe.vtexassets.com/arquivos/ids/373632/82XT002PLM_1.jpg?v=638550451047670000" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
+						<div class="card-body">
+							<h5 class="card-title">LENOVO</h5>
+							<p class="card-text">Celular Redmi Note A54 5G 256GB 8GB RAM Negro <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img
-							src="https://plazavea.vteximg.com.br/arquivos/ids/27363679-512-512/20355393.jpg"
-							class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">HP</h5>
-						<p class="card-text">Laptop HP XPS 13, 13.3" 4K Ultra HD, Intel Core i7, 16GB RAM, 1TB SSD. <br>
-							S/2,444.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+				<div class="col-lg-3 offset-md-0 col-md-4 col-ms-6 p-2">
+					<div class="card" style="min-height:500px;">
+						<a href="detalle.html"><img src="https://www.shopper.com.gt/wp-content/uploads/2024/03/14-Laptop-Gaming-3-15ARH7-15.6plg.-AMD-Ryzen-7-7735HS-512GB-SSD-NVIDIA-GeForce-RTX-4050-Lenovo-1.jpg" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
+						<div class="card-body">
+							<h5 class="card-title">LENOVO</h5>
+							<p class="card-text">Celular Honor A54 5G 256GB 8GB RAM Negro <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 offset-md-0 col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img src="https://www.venex.com.ar/products_images/1715001843_hp-cuc.jpg"
-							class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">LENOVO</h5>
-						<p class="card-text">Laptop Lenovo ThinkPad X1 Carbon, 14" WQHD, Intel Core i7, 16GB RAM, 512GB SSD.
-							<br>
-							S/1,994.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+				<div class="col-lg-3 col-md-4 col-ms-6 p-2">
+					<div class="card" style="min-height:500px;">
+						<a href="detalle.html"><img src="https://www.eccom.pe/wp-content/uploads/2023/11/114122776_1.jpeg" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
+						<div class="card-body">
+							<h5 class="card-title">ACER</h5>
+							<p class="card-text">Celular Honor A54 5G 256GB 8GB RAM Negro <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img
-							src="https://plazavea.vteximg.com.br/arquivos/ids/28779842-512-512/imageUrl_1.jpg"
-							class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">HP</h5>
-						<p class="card-text"> Laptop HP Pavilion 15.6" Full HD, Intel Core i5, 8GB RAM, 512GB SSD.<br>
-							S/2,444.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+				<div class="col-lg-3 col-md-4 col-ms-6 p-2">
+					<div class="card" style="min-height:500px;">
+						<a href="detalle.html"><img src="https://oechsle.vteximg.com.br/arquivos/ids/14361961-1000-1000/image-2cc15fa1e41a46339ec9cfbc32b7b6ec.jpg?v=638277417058670000" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
+						<div class="card-body">
+							<h5 class="card-title">ASUS</h5>
+							<p class="card-text">Iphone 14 Pro Apple 128gb Gold <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3EP2xfkr4QvitlwlCZiz9i-kohmWoDU5LhStF5GXY1OCTiIPC1GBmqW-U_ibPucO4khY&usqp=CAU"
-							class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">HP</h5>
-						<p class="card-text">Laptop HP Pavilion x360, 14" Full HD Touchscreen, Intel Core i5, 8GB RAM, 256GB SSD.<br>
-							S/4,444.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+				<div class="col-lg-3 col-md-4 col-ms-6 p-2">
+					<div class="card" style="min-height:500px;">
+						<a href="detalle.html"><img src="https://www.kabifperu.com/imagenes/prod-24022021203900-laptop-asus-fx505g-i5-9300h-fx505gt-bq018-gaming-tuf-15-6-i5-512ssd-8gb-gtx1650-4g-s-sistema-deta.png" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
+						<div class="card-body">
+							<h5 class="card-title">ASUS</h5>
+							<p class="card-text">Iphone 14 Pro Apple 128gb Gold <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXXP8kPhWsxzmQnO8zPSievykHSDkk9EsqdwlgDRcnOhqe4-rN_bfBkWgwdHQhi2txcBs&usqp=CAU"
-							class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">HP</h5>
-						<p class="card-text">Laptop HP Spectre x360, 13.3" 4K Touchscreen, Intel Core i7, 16GB RAM, 512GB SSD.<br>
-							S/2,900.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+				<div class="col-lg-3 col-md-4 col-ms-6 p-2">
+					<div class="card" style="min-height:500px;">
+						<a href="detalle.html"><img src="https://rymportatiles.com.pe/cdn/shop/files/STRIXG16_2024_G614JVR-ES94.png?v=1705965253&width=1214" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
+						<div class="card-body">
+							<h5 class="card-title">ASUS</h5>
+							<p class="card-text">Iphone 14 Pro Apple 128gb Gold <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img
-							src="https://plazavea.vteximg.com.br/arquivos/ids/24617749-512-512/20255585.jpg"
-							class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">LENOVO</h5>
-						<p class="card-text">Laptop Lenovo ThinkPad X1 Carbon, 14" WQHD IPS, Intel Core i7, 16GB RAM, 512GB SSD.<br>
-							S/5,444.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
+				<div class="col-lg-3 col-md-4 col-ms-6 p-2">
+					<div class="card" style="min-height:500px;">
+						<a href="detalle.html"><img src="https://www.kabifperu.com/imagenes/prod-24022021171348-laptop-asus-gl704g-i7-8750h-gl704gw-ev057t-gaming-17-i7-512sdd-16gb-rtx-2070-8g-w10-mochila-mouse-deta.png" class="card-img-top w-100" alt="..." style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
+						<div class="card-body">
+							<h5 class="card-title">ASUS</h5>
+							<p class="card-text">Iphone 14 Pro Apple 128gb Gold <br>
+								S/2,444.00
+							</p>
+							<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
+							<div class="favorito" style="margin-top: -30px;">
+								<div id="favv">
+									<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos" href="favoritos.html"><img style="height:25px;margin-top: 3px;" src="../img/favorito.png" alt=""></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-ms-6 p-2">
-				<div class="card" style="min-height:500px;">
-					<a href="detalle.html"><img
-							src="https://plazavea.vteximg.com.br/arquivos/ids/29227291-300-300/20392834.jpg?v=638567137167900000"
-							class="card-img-top w-100" alt="..."
-							style="height: 300px;width: 80%;display: block; margin: 0 auto;padding: 10px;"></a>
-					<div class="card-body">
-						<h5 class="card-title">LENOVO</h5>
-						<p class="card-text">Laptop Lenovo IdeaPad Slim 7, 15.6" Full HD IPS, Intel Core i5, 8GB RAM, 512GB SSD.<br>
-							S/2,700.00
-						</p>
-						<a href="carrito.html" class="btn btn-primary">Añadir a carrito</a>
-						<div class="favorito" style="margin-top: -30px;">
-							<div id="favv">
-								<a data-bs-toggle="mensaje" data-bs-placement="top" title="Añadir a favoritos"
-									href="favoritos.html"><img style="height:25px;margin-top: 3px;"
-										src="../img/favorito.png" alt=""></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
+			</div>
 		</div>
-	</div>
-	<div class="pagination">
-		<nav class="navv" aria-label="Page navigation example">
-			<ul class="pagination justify-content-end">
-				<li class="page-item disabled">
+		<div class="pagination">
+			<nav class="navv" aria-label="Page navigation example">
+				<ul class="pagination justify-content-end">
+				  <li class="page-item disabled">
 					<a class="page-link">Anterior</a>
-				</li>
-				<li class="page-item"><a class="page-link" href="#">1</a></li>
-				<li class="page-item"><a class="page-link" href="#">2</a></li>
-				<li class="page-item"><a class="page-link" href="#">3</a></li>
-				<li class="page-item">
+				  </li>
+				  <li class="page-item"><a class="page-link" href="#">1</a></li>
+				  <li class="page-item"><a class="page-link" href="#">2</a></li>
+				  <li class="page-item"><a class="page-link" href="#">3</a></li>
+				  <li class="page-item">
 					<a class="page-link" href="#">Proximo</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
+				  </li>
+				</ul>
+			  </nav>
+		</div>
 
 	</div>
+       
+        <div id="footer" class="col-12" style="background: #413FB6; height: 100px;">
 
-	<div id="footer" class="col-12" style="background: #413FB6; height: 100px;">
+            <footer id="footer">
+                <div class="container container-footer">
+                    <div class="menu-footer">
 
-		<footer id="footer">
-			<div class="container container-footer">
-				<div class="menu-footer">
+                        <div class="info">
+                            <p class="title-footer"> <b>Contactanos</b></p>
+                            <ul>
+                                <li><a href="">Chatea con Nosotros</a></li>
+                                <li style="color: white;">LLamanos al <a
+                                        href="https://web.whatsapp.com/">(01)620-4806</a>
+                                </li>
+                                <li><a href="">Visitanos</a></li>
+                                <li><a
+                                        href="https://www.google.com/maps/place/CORPORACI%C3%93N+NOVATEC/@-12.9377497,-74.2506347,21z/data=!4m15!1m8!3m7!1s0x910d823b73974cc9:0xce097af84f3e6627!2sHuanta!3b1!8m2!3d-12.9384113!4d-74.2502122!16s%2Fm%2F047t52z!3m5!1s0x910d832fd6c506cf:0x1f6753fca89919b7!8m2!3d-12.9377464!4d-74.2505608!16s%2Fg%2F11ny1t0lpr?entry=ttu">Av.
+                                        Mariscal Castilla 45</a></li>
 
-					<div class="info">
-						<p class="title-footer"> <b>Contactanos</b></p>
-						<ul>
-							<li><a href="">Chatea con Nosotros</a></li>
-							<li style="color: white;">LLamanos al <a href="https://web.whatsapp.com/">(01)620-4806</a>
-							</li>
-							<li><a href="">Visitanos</a></li>
-							<li><a
-									href="https://www.google.com/maps/place/CORPORACI%C3%93N+NOVATEC/@-12.9377497,-74.2506347,21z/data=!4m15!1m8!3m7!1s0x910d823b73974cc9:0xce097af84f3e6627!2sHuanta!3b1!8m2!3d-12.9384113!4d-74.2502122!16s%2Fm%2F047t52z!3m5!1s0x910d832fd6c506cf:0x1f6753fca89919b7!8m2!3d-12.9377464!4d-74.2505608!16s%2Fg%2F11ny1t0lpr?entry=ttu">Av.
-									Mariscal Castilla 45</a></li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <p class="title-footer"> <b>Acerca de NOVATEC</b></p>
+                            <ul>
+                                <li><a href="">Nosotros</a></li>
+                                <li><a href="">tiendas</a></li>
+                                <li><a href="">Visitanos</a></li>
+                                <li><a href="">Libro de reclamaciones</a></li>
 
-						</ul>
-					</div>
-					<div class="info">
-						<p class="title-footer"> <b>Acerca de NOVATEC</b></p>
-						<ul>
-							<li><a href="">Nosotros</a></li>
-							<li><a href="">tiendas</a></li>
-							<li><a href="">Visitanos</a></li>
-							<li><a href="">Libro de reclamaciones</a></li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <p class="title-footer"> <b>Atencion al cliente</b></p>
+                            <ul>
+                                <li><a href="">Preguntas frecuente</a></li>
+                                <li><a href="">Tutorial de compra</a></li>
+                                <li><a href="">Cambios y devoluciones</a></li>
+                                <li><a href="">Terminos y condiciones</a></li>
 
-						</ul>
-					</div>
-					<div class="info">
-						<p class="title-footer"> <b>Atencion al cliente</b></p>
-						<ul>
-							<li><a href="">Preguntas frecuente</a></li>
-							<li><a href="">Tutorial de compra</a></li>
-							<li><a href="">Cambios y devoluciones</a></li>
-							<li><a href="">Terminos y condiciones</a></li>
+                            </ul>
+                        </div>
+                        <div class="newsletter">
+                            <p class="title-footer"><b>Siguenos en</b></p>
+                            <a href="https://www.facebook.com/"><img
+                                    src="../img/face.png" alt=""></a>
+                            <a href="https://www.youtube.com/?app=desktop&hl=es"><img src="../img/youtu.png" alt=""></a>
+                            <a href="https://www.instagram.com/"><img src="../img/insta.png" alt=""></a>
+                        </div>
+                    </div>
 
-						</ul>
-					</div>
-					<div class="newsletter">
-						<p class="title-footer"><b>Siguenos en</b></p>
-						<a href="https://www.facebook.com/?locale=es_LA"><img
-								src="../img/face.png" alt=""></a>
-						<a href="https://www.youtube.com/?app=desktop&hl=es"><img src="../img/youtu.png" alt=""></a>
-						<a href="https://www.instagram.com/"><img src="../img/insta.png" alt=""></a>
-					</div>
-				</div>
+                </div>
+            </footer>
 
-			</div>
-		</footer>
+        </div>
 
-	</div>
-	</div>
+
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="mensaje"]'));
-	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-		return new bootstrap.Tooltip(tooltipTriggerEl)
-	})
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="mensaje"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 </script>
 
 </html>
