@@ -8,7 +8,7 @@ if($tipo=="registrar"){
 
      if ($_POST){
         $codigo = $_POST['codigo'];
-        $nombre = $_POST['nombree'];
+        $nombree = $_POST['nombree'];
         $detalle = $_POST['detalle'];
         $precio = $_POST['precio'];
         $stock = $_POST['stock'];
@@ -29,6 +29,7 @@ if($tipo=="registrar"){
                 $arr_Respuesta = array('status'=>false,
                 'mensaje'=>'Error al registrar el producto');
             }
+            echo json_encode($arr_Respuesta);
         }
 
      }
