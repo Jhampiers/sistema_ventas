@@ -4,7 +4,7 @@ $tipo= $_REQUEST['tipo'];
 //instancia la clase modelo
 $objProducto = new ProductoModel();
 if($tipo=="registrar"){
-    print_r($_POST);
+    /*print_r($_POST);*/
 
      if ($_POST){
         $codigo = $_POST['codigo'];
