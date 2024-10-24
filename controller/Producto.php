@@ -1,5 +1,5 @@
 <?php
-require_once('./model/productoModel.php');
+require_once('../model/productoModel.php');
 $tipo= $_REQUEST['tipo'];
 //instancia la clase modelo
 $objProducto = new ProductoModel();
@@ -21,6 +21,14 @@ if($tipo=="registrar"){
         }else{
             $arrProducto = $objProducto->registrarProducto
             ($codigo, $nombree, $detalle, $precio ,$stock ,$categoria ,$imagen1 ,$proveedor);
+
+            if($arrProducto->id>0){
+                $arr_Respuesta = array('status'=>true,
+                'mensaje'=>'Registro Exitoso');
+            }else{
+                $arr_Respuesta = array('status'=>false,
+                'mensaje'=>'Error al registrar el producto');
+            }
         }
 
      }
