@@ -40,6 +40,17 @@ async function registrar_producto() {
 async function listar_categorias() {
     try{
         let respuesta= await fetch(base_url+'controller/categoria.php?tipo=listar');
+        json = await respuesta.json();
+        if (json.status){
+            let datos = json.contenido;
+            datos.forEach(element => {
+                $('#categoria').append($('<option />'),{
+                    text:`${element.nombre}`,
+                    value: `${element.id}`
+                });
+            });
+
+        }
 
         console.log(respuesta);
 
