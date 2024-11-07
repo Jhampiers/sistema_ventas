@@ -31,9 +31,12 @@
     <div>
         <label for=""> imagen1: </label>
             <input type="text" class="form-control" id="imagen1" name="imagen1" >
-    </div><div>
-        <label for="">proveedor:</label>
-            <input type="number" class="form-control" id="proveedor" name="proveedor" >
+    </div>
+    <div>
+    <label for="">proveedor: </label>
+        <select name="proveedor" id="proveedor"  class="form-control">
+            <option>Seleccione</option>
+        </select>
     </div>
     <br>
     
@@ -42,3 +45,4 @@
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_producto.js"></script>
 <script>listar_categorias();</script>
+<script>listar_proveedores()</script>
