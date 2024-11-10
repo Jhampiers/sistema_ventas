@@ -8,6 +8,12 @@ class CategoriaModel{
         $this->conexion = new Conexion();
         $this->conexion = $this->conexion->connect();
     }
+     // TRABAJO ANIBAL
+     public function registrarCategoria($nombre, $detalle) {
+        $sql = $this->conexion->query("CALL insertcategoria('{$nombre}', '{$detalle}')");
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
     public function obtener_categorias(){
         $arrRespuesta = array();
         $respuesta = $this->conexion->query("SELECT*FROM categoria");
@@ -19,5 +25,7 @@ class CategoriaModel{
         return $arrRespuesta;
         
     }
+
 }
+
 ?>

@@ -1,6 +1,7 @@
 
 <div class="container form-nproduct">
-<form action="" id="frmRegistrar" style="margin-top:200px;margin-bottom: 15px">
+<form action="" id="frmRegistrar" class=" mb-4 border  p-3" style="margin-top:200px">
+    <h4 class="text-center mb-4">Registrar Producto</h4>
     <div>
         <label for=""> codigo: </label>
             <input type="number"  class="form-control" id="codigo" name="codigo" >

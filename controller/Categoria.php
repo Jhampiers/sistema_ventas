@@ -6,6 +6,27 @@ $tipo = $_REQUEST['tipo'];
 //instanciar la categoria model
 $objCategoria = new CategoriaModel();
 
+// TRABAJO ANIBAL
+if ($tipo == "registrar") {
+    if ($_POST) {
+        $nombre = $_POST['nombre'];
+        $detalle = $_POST['detalle'];
+
+        if ($nombre == "" || $detalle == "") {
+            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacíos');
+        } else {
+            $arrCategoria = $objCategoria->registrarCategoria
+            ($nombre, $detalle);
+            if ($arrCategoria->id > 0) {
+                $arr_Respuesta = array('status' => true, 'mensaje' => 'Registro Exitoso');
+            } else {
+                $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al registrar la categoría');
+            }
+            echo json_encode($arr_Respuesta);
+        }
+    }
+}
+
 
 if ($tipo=="listar"){
     //respuesta
