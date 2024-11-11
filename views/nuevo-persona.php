@@ -1,10 +1,10 @@
 
 <div class="container form-nproduct">
-<form action="" class=" mb-4 border  p-3" style="margin-top:200px;">
+<form action="" id="frmRegistrar" class=" mb-4 border  p-3" style="margin-top:200px;">
     <h4 class="text-center mb-4">Registrar Persona</h4>
     <div>
         <label for=""> Nro identidad: </label>
-            <input type="text" class="form-control" id="dni" name="dni" >
+            <input type="text" class="form-control" id="nro_identidad" name="nro_identidad" >
     </div>
     <div>
         <label for=""> Nombre: </label>
@@ -44,7 +44,7 @@
     </div>
     <div>
         <label for=""> password: </label>
-            <input type="text" class="form-control" id="password" name="password" >
+            <input type="password" class="form-control" id="password" name="password" >
     </div>
     <div>
         <label for=""> estado: </label>
@@ -53,10 +53,11 @@
 
     <div>
         <label for=""> fecha registro: </label>
-            <input type="text" class="form-control" id="fecha_registro" name="fecha_registro" >
+            <input type="date" class="form-control" id="fecha_registro" name="fecha_registro" >
     </div>
    
    
     <button type="button" class="btn btn-primary mt-3" onclick="registrar_persona();">registrar</button>
     </div>
 </form>
+<script src="<?php echo BASE_URL;?>views/js/functions_persona.js"></script>
