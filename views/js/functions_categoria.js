@@ -1,5 +1,5 @@
 
-//TRABAJO DE ANIBAL
+
 async function registrar_categoria() {
     let nombre = document.getElementById('nombre').value;
     let detalle = document.querySelector('#detalle').value;
@@ -8,7 +8,7 @@ async function registrar_categoria() {
         alert("Error, campos vacíos");
         return;
     }
- //capturamos los datos de formulario html
+
     try {
         const datos = new FormData(frmRegistrar);
         datos.append('nombre', nombre);
@@ -33,3 +33,6 @@ async function registrar_categoria() {
         console.log("Oops, ocurrió un error " + e);
     }
 }
+
+
+

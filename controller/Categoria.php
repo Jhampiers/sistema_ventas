@@ -3,10 +3,8 @@
 require_once "../model/categoriaModel.php";
 $tipo = $_REQUEST['tipo'];
 
-//instanciar la categoria model
 $objCategoria = new CategoriaModel();
 
-// TRABAJO ANIBAL
 if ($tipo == "registrar") {
     if ($_POST) {
         $nombre = $_POST['nombre'];
@@ -29,11 +27,11 @@ if ($tipo == "registrar") {
 
 
 if ($tipo=="listar"){
-    //respuesta
+   
     $arr_Respuesta = array('status'=>false, 'contenido'=>'');
     $arr_Categorias = $objCategoria->obtener_categorias();
     if (!empty($arr_Categorias)){
-        //recorremos el array para agregar las opciones de categorias
+    
        for($i=0; $i < count($arr_Categorias); $i++){
           $id_categoria = $arr_Categorias[$i]->id;
           $categoria = $arr_Categorias[$i]->nombre;

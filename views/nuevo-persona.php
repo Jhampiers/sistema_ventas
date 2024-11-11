@@ -56,7 +56,6 @@
             <input type="date" class="form-control" id="fecha_registro" name="fecha_registro" >
     </div>
    
-   
     <button type="button" class="btn btn-primary mt-3" onclick="registrar_persona();">registrar</button>
     </div>
 </form>
