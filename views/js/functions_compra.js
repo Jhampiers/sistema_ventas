@@ -38,3 +38,53 @@ async function registrar_compra() {
         console.log("Oops, ocurrió un error " + e);
     }
 }
+
+async function listar_productos() {
+    try{
+        let respuesta = await fetch(base_url+'controller/producto.php?tipo=listar');
+        json = await respuesta.json();
+        if (json.status){
+            let datos = json.contenido;
+            let contenido_select = '<option value="">Seleccione</option>';
+            datos.forEach(element => {
+                contenido_select += '<option value="' + element.id + '">' + element.nombre + '</option>';
+                //se trabaja con jquery
+                /*$('#categoria').append($('<option />',{
+                    text:`${element.nombre}`,
+                    value: `${element.id}`
+                }));*/
+            });
+            document.getElementById('producto').innerHTML = contenido_select;
+        }
+        console.log(respuesta);
+    }catch{
+        console.log("error al cargar productos"+e);
+    }
+    
+}
+async function listar_trabajadores() {
+    try {
+        let respuesta = await fetch(base_url+'controller/trabajador.php?tipo=listar');
+        json = await respuesta.json();
+        if (json.status){
+            let datos = json.contenido;
+            let contenido_select = '<option value="">Seleccione</option>';
+            datos.forEach(element => {
+                contenido_select += '<option value="' + element.id + '">' + element.nombre + '</option>';
+                //se trabaja con jquery
+                /*$('#categoria').append($('<option />',{
+                    text:`${element.nombre}`,
+                    value: `${element.id}`
+                }));*/
+            });
+            document.getElementById('trabajador').innerHTML = contenido_select;
+        }
+        console.log(respuesta);
+        
+    } catch {
+        console.log("error al cargar trabajadores"+e);
+    }
+    
+}
+
+
