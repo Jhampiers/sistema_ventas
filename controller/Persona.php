@@ -19,6 +19,7 @@ if ($tipo == "registrar") {
         $direccion = $_POST['direccion'];
         $rol = $_POST['rol'];
         $password = $_POST['password'];
+        
         $estado = $_POST['estado'];
         $fecha_registro = $_POST['fecha_registro'];
         $secure_password = password_hash($password,PASSWORD_DEFAULT);

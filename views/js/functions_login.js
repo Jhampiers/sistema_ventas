@@ -9,7 +9,7 @@ async function iniciar_sesion() {
     //capturamos los datos de formulario html
     const datos=new FormData(frm_iniciar_sesion);
     //enviar los datos hacia el controlador
-    let respuesta = await fetch(base_url+'controller/Login.php?tipo=iniciar_sesion',{
+    let respuesta = await fetch(base_url+'controller/login.php?tipo=iniciar_sesion',{
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
@@ -18,7 +18,8 @@ async function iniciar_sesion() {
     });
     json = await respuesta.json();
     if (json.status){
-        swal("Iniciar Sesion",json.mensaje,"success");
+        //swal("Iniciar Sesion",json.mensaje,"success");
+        location.replace(base_url+"nuevo-producto");
     }else{
         swal("Iniciar Sesion",json.mensaje,"error");
     }
@@ -38,3 +39,20 @@ if(document.querySelector('#frm_iniciar_sesion')){
         iniciar_sesion();
     }
 }
+ async function cerrar_sesion() {
+    try {
+        let respuesta = await fetch(base_url+'controller/login.php?tipo=cerrar_sesion',{
+            method:'POST',
+            mode:'cors',
+            cache:'no-cache'
+        });
+        json = await respuesta.json();
+        if(json.status){
+            location.replace(base_url+'login');
+
+        }
+    } catch (error) {
+        console.log('Ocurrio un error'+error);
+    }
+    
+ }
