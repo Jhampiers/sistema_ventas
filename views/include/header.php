@@ -66,11 +66,7 @@
                         <li class="nav-item me-3">
                            <a href="" onclick="cerrar_sesion();">Cerrar Sesión</a>
                         </li>
-                        <li class="nav-item me-3">
-                           <a href="">Usuario</a>
-                        </li>
-                        
-                        
+                         
                     </ul>
 
                 </div>
