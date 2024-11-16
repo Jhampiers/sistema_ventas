@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,104 +8,125 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo BASE_URL ?>views/plantilla/css/style.css">
     <link rel="icon" href="img/Pes...ico">
-	<script>
-		const base_url = '<?php echo BASE_URL;?>';
-	</script>
+    <script>
+        const base_url = '<?php echo BASE_URL; ?>';
+    </script>
 </head>
 <script src="https://kit.fontawesome.com/f244ab63ac.js" crossorigin="anonymous"></script>
 
 <body>
 
     <div class="container-fluid p-0">
-
-        <nav class="navbar navbar-dark fixed-top"
-            style="background-color:#413FB6 ; height: 145px;box-sizing:content-box;">
+    <nav class="navbar navbar-dark fixed-top" style="background-color:#413FB6; min-height:150px;">
             <div class="container-fluid">
-             
+                <!-- Logo -->
                 <a class="navbar-brand d-none d-lg-block" href="<?php echo BASE_URL ?>index">
-                    <img src="./views/plantilla/img/logo.png" alt="Bootstrap" width="350px" height="100px">
+                    <img src="./views/plantilla/img/logo.png" alt="Logo" width="350" height="100" class="d-inline-block align-top">
                 </a>
 
-                <button class="navbar-toggler" style="color: #413FB6 ;" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler order-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-               
-                <div class="d-flex justify-content-end align-items-center flex-grow-1">
-                    
-                    <form class="d-flex mt-3 me-0" style="width:60%;margin-bottom:20px">
-                        <input class="form-control me-2" type="search" placeholder="¿Queestas buscando?"
-                            aria-label="Search">
-                        <button style="border-color:#DCDCDC ;color: #B8B8B8 ;" class="btn btn-outline-primary"
-                            type="submit">Buscar</button>
-                    </form>
+                <!-- Contenedor principal de elementos -->
+                <div class="d-flex flex-grow-1 justify-content-end align-items-center gap-3">
+                    <!-- Barra de búsqueda -->
+                    <div class="d-none d-md-block flex-grow-1 mx-4">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Buscar</button>
+                        </form>
+                    </div>
 
-                    <ul class="navbar-nav d-flex flex-row" style="margin-left:60px;margin-top:-5px;">
-                        <li class="nav-item me-3"> 
-                            <a href="<?php echo BASE_URL ?>favoritos"><i class="fas fa-bookmark fa-lg icon-zoom"
-                                    style="margin-right: 15px;color: white;"></i>
+                    <!-- Iconos de navegación -->
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Favoritos -->
+                        <a href="<?php echo BASE_URL ?>favoritos" class="text-white">
+                            <i class="fas fa-bookmark fa-lg"></i>
+                        </a>
+
+                        <!-- Usuario Dropdown -->
+                        <div class="dropdown">
+                            <a class="text-white position-relative px-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user fa-lg"></i>
                             </a>
+                            <div class="dropdown-menu dropdown-menu-end shadow-sm mt-2 position-absolute" style="min-width: 200px;">
+                                <!-- Triángulo usando Font Awesome -->
+                                <div class="position-absolute top-0 start-50 translate-middle-x text-white">
+                                    <i class="fas fa-caret-up fa-2x" style="margin-top: -16px;"></i>
+                                </div>
 
-                        </li>
-                        <li class="nav-item me-3">
-                            <a href="<?php echo BASE_URL ?>login"><i class="fas fa-user fa-lg icon-zoom"
-                                    style="margin-right: 15px;color: white;"></i>
-                            </a>
+                                <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>login">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
+                                </a>
+                                <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>register">
+                                    <i class="fas fa-user-plus me-2"></i>Registrarse
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>profile">
+                                    <i class="fas fa-user-circle me-2"></i>Perfil
+                                </a>
+                            </div>
+                        </div>
 
-                        </li>
-                        <li class="nav-item me-3">
-                            <a href="<?php echo BASE_URL ?>carrito" class="cart-link" style="position: relative; display: inline-block;">
-                                <i class="fas fa-shopping-cart fa-lg icon-zoom" style="color: white;margin-right:40px;"></i>
-                                <span class="cart-badge">0</span>
-                            </a>
-                        </li>
+                        <!-- Carrito -->
+                        <a href="<?php echo BASE_URL ?>carrito" class="text-white position-relative">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                                <span class="visually-hidden">productos en carrito</span>
+                            </span>
+                        </a>
 
-                        <li class="nav-item me-3">
-                           <a href="" onclick="cerrar_sesion();">Cerrar Sesión</a>
-                        </li>
-                         
-                    </ul>
-
+                        <!-- Cerrar Sesión -->
+                        <a href="#" onclick="cerrar_sesion();" class="text-white text-decoration-none d-none d-md-block">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="ms-1">Cerrar Sesión</span>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="offcanvas offcanvas-start " style="background-color: white;" tabindex="-1"
-                    id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header" style="background-color: #413FB6;height:70px;">
-
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+                <!-- Offcanvas Menu -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar">
+                    <div class="offcanvas-header " style="background-color:#413FB6">
+                        <h5 class="offcanvas-title text-white">Menú</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Categorias</h5>
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a style="color: black;" class="nav-link active" aria-current="page"
-                                    href="<?php echo BASE_URL ?>producto">Celulares</a>
-                            </li>
-                            <li class="nav-item">
-                                <a style="color: black;" class="nav-link active" aria-current="page"
-                                    href="<?php echo BASE_URL ?>producto3">Laptops</a>
-                            </li>
-                            <li class="nav-item">
-                                <a style="color: black;" class="nav-link active" aria-current="page"
-                                    href="<?php echo BASE_URL ?>producto2">Accesorios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a style="color: black;" class="nav-link active" aria-current="page"
-                                    href="<?php echo BASE_URL ?>contacto">Contactanos</a>
+                        <!-- Barra de búsqueda móvil -->
+                        <div class="d-md-none mb-3">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+                                <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                            </form>
+                        </div>
 
+                        <h6 class="text-uppercase fw-bold mb-3">Categorías</h6>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="<?php echo BASE_URL ?>producto">Celulares</a>
                             </li>
                             <li class="nav-item">
-                                <a style="color: black;" class="nav-link active" aria-current="page"
-                                    href="<?php echo BASE_URL ?>nosotros">Nosotros</a>
+                                <a class="nav-link text-dark" href="<?php echo BASE_URL ?>producto3">Laptops</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="<?php echo BASE_URL ?>producto2">Accesorios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="<?php echo BASE_URL ?>contacto">Contáctanos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="<?php echo BASE_URL ?>nosotros">Nosotros</a>
+                            </li>
+                            <!-- Cerrar Sesión en móvil -->
+                            <li class="nav-item d-md-none">
+                                <a class="nav-link text-dark" href="#" onclick="cerrar_sesion();">
+                                    <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-
             </div>
         </nav>
-
-	

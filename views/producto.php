@@ -18,7 +18,7 @@
 		</div>
 
 <div id="productoss">
-			<div class="container-fluid m-0 p-5 mt-0 row ">
+			<div class="container-fluid m-0 p-5 mt-0 row  ">
 				<div class="col-lg-3 offset-md-0 col-md-4 col-ms-6 p-2 ">
 					<div class="card"  style="min-height:500px;">
 						<a href="detalle.html"><img src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/20185280_01/w=800,h=800,fit=pad" class="card-img-top w-100" alt="..." style="height: 300px;width: 40%;display: block; margin: 0 auto;padding: 10px;">

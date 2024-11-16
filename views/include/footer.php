@@ -1,120 +1,121 @@
-    <div id="footer" class="col-12" style="background: #413FB6; height: 100px;">
+<div class="py-4" style="background-color:#413FB6;">
+	<footer class="container">
+		<div class="row gy-4">
+			<!-- Contact Section -->
+			<div class="col-12 col-sm-6 col-lg-3">
+				<h5 class="text-white fw-bold mb-3">Contactanos</h5>
+				<ul class="list-unstyled">
+					<li><a href="" class="text-white text-decoration-none">Chatea con Nosotros</a></li>
+					<li class="text-white">LLamanos al <a href="https://web.whatsapp.com/" class="text-white">(01)620-4806</a></li>
+					<li><a href="" class="text-white text-decoration-none">Visitanos</a></li>
+					<li><a href="https://www.google.com/maps/place/CORPORACIÓN+NOVATEC" class="text-white text-decoration-none">Av. Mariscal Castilla 45</a></li>
+				</ul>
+			</div>
 
-    	<footer id="footer">
-    		<div class="container container-footer">
-    			<div class="menu-footer">
+			<!-- About Section -->
+			<div class="col-12 col-sm-6 col-lg-3">
+				<h5 class="text-white fw-bold mb-3">Acerca de NOVATEC</h5>
+				<ul class="list-unstyled">
+					<li><a href="" class="text-white text-decoration-none">Nosotros</a></li>
+					<li><a href="" class="text-white text-decoration-none">tiendas</a></li>
+					<li><a href="" class="text-white text-decoration-none">Visitanos</a></li>
+					<li><a href="" class="text-white text-decoration-none">Libro de reclamaciones</a></li>
+				</ul>
+			</div>
 
-    				<div class="info">
-    					<p class="title-footer"> <b>Contactanos</b></p>
-    					<ul>
-    						<li><a href="">Chatea con Nosotros</a></li>
-    						<li style="color: white;">LLamanos al <a
-    								href="https://web.whatsapp.com/">(01)620-4806</a>
-    						</li>
-    						<li><a href="">Visitanos</a></li>
-    						<li><a
-    								href="https://www.google.com/maps/place/CORPORACI%C3%93N+NOVATEC/@-12.9377497,-74.2506347,21z/data=!4m15!1m8!3m7!1s0x910d823b73974cc9:0xce097af84f3e6627!2sHuanta!3b1!8m2!3d-12.9384113!4d-74.2502122!16s%2Fm%2F047t52z!3m5!1s0x910d832fd6c506cf:0x1f6753fca89919b7!8m2!3d-12.9377464!4d-74.2505608!16s%2Fg%2F11ny1t0lpr?entry=ttu">Av.
-    								Mariscal Castilla 45</a></li>
+			<!-- Customer Service Section -->
+			<div class="col-12 col-sm-6 col-lg-3">
+				<h5 class="text-white fw-bold mb-3">Atencion al cliente</h5>
+				<ul class="list-unstyled">
+					<li><a href="" class="text-white text-decoration-none">Preguntas frecuente</a></li>
+					<li><a href="" class="text-white text-decoration-none">Tutorial de compra</a></li>
+					<li><a href="" class="text-white text-decoration-none">Cambios y devoluciones</a></li>
+					<li><a href="" class="text-white text-decoration-none">Terminos y condiciones</a></li>
+				</ul>
+			</div>
 
-    					</ul>
-    				</div>
-    				<div class="info">
-    					<p class="title-footer"> <b>Acerca de NOVATEC</b></p>
-    					<ul>
-    						<li><a href="">Nosotros</a></li>
-    						<li><a href="">tiendas</a></li>
-    						<li><a href="">Visitanos</a></li>
-    						<li><a href="">Libro de reclamaciones</a></li>
-
-    					</ul>
-    				</div>
-    				<div class="info">
-    					<p class="title-footer"> <b>Atencion al cliente</b></p>
-    					<ul>
-    						<li><a href="">Preguntas frecuente</a></li>
-    						<li><a href="">Tutorial de compra</a></li>
-    						<li><a href="">Cambios y devoluciones</a></li>
-    						<li><a href="">Terminos y condiciones</a></li>
-
-    					</ul>
-    				</div>
-    				<div class="newsletter">
-    					<p class="title-footer"><b>Siguenos en</b></p>
-    					<a href="https://www.facebook.com/"><img
-    							src="./views/plantilla/img/face.png" alt=""></a>
-    					<a href="https://www.youtube.com/?app=desktop&hl=es"><img src="./views/plantilla/img/youtu.png" alt=""></a>
-    					<a href="https://www.instagram.com/"><img src="./views/plantilla/img/insta.png" alt=""></a>
-    				</div>
-    			</div>
-
-    		</div>
-    	</footer>
-
-    </div>
+			<!-- Social Media Section -->
+			<div class="col-12 col-sm-6 col-lg-3">
+				<h5 class="text-white fw-bold mb-3">Siguenos en</h5>
+				<div class="d-flex gap-3">
+					<a href="https://www.facebook.com/" class="text-white">
+						<i class="bi bi-facebook fs-4"></i>
+					</a>
+					<a href="https://www.youtube.com/" class="text-white">
+						<i class="bi bi-youtube fs-4"></i>
+					</a>
+					<a href="https://www.instagram.com/" class="text-white">
+						<i class="bi bi-instagram fs-4"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
 
 
-    </div>
-    </body>
-	<script src="<?php echo BASE_URL;?>views/js/jquery-3.6.0.min.js"></script>
-	<script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
-	
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-    	const signUpButton = document.getElementById('signUp');
-    	const signInButton = document.getElementById('signIn');
-    	const coontainer = document.getElementById('coontainer');
+</div>
+</body>
+<script src="<?php echo BASE_URL; ?>views/js/jquery-3.6.0.min.js"></script>
+<script src="<?php echo BASE_URL; ?>views/js/functions_login.js"></script>
 
-    	signUpButton.addEventListener('click', () => {
-    		coontainer.classList.add("right-panel-active");
-    	});
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const coontainer = document.getElementById('coontainer');
 
-    	signInButton.addEventListener('click', () => {
-    		coontainer.classList.remove("right-panel-active");
-    	});
-    </script>
+	signUpButton.addEventListener('click', () => {
+		coontainer.classList.add("right-panel-active");
+	});
 
-    <script>
-    	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="mensaje"]'));
-    	var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
-    		return new bootstrap.Tooltip(tooltipTriggerEl)
-    	})
-    </script>
+	signInButton.addEventListener('click', () => {
+		coontainer.classList.remove("right-panel-active");
+	});
+</script>
 
-    <script>
-    	function sumarcantidad() {
-    		var precio = document.getElementById('precio_p1').value;
-    		var cantidad = document.getElementById('cantidad_p1').value;
-    		var nueva_cantidad = parseInt(cantidad) + 1;
-    		document.getElementById('cantidad_p1').value = nueva_cantidad;
-    		calcular_subtotal(precio, nueva_cantidad);
-    	}
+<script>
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="mensaje"]'));
+	var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl)
+	})
+</script>
 
-    	function restarcantidad() {
-    		var precio = document.getElementById('precio_p1').value;
-    		var cantidad = document.getElementById('cantidad_p1').value;
-    		if (cantidad > 1) {
-    			var nueva_cantidad = parseInt(cantidad) - 1;
-    			document.getElementById('cantidad_p1').value = nueva_cantidad;
-    			calcular_subtotal(precio, nueva_cantidad);
-    		}
+<script>
+	function sumarcantidad() {
+		var precio = document.getElementById('precio_p1').value;
+		var cantidad = document.getElementById('cantidad_p1').value;
+		var nueva_cantidad = parseInt(cantidad) + 1;
+		document.getElementById('cantidad_p1').value = nueva_cantidad;
+		calcular_subtotal(precio, nueva_cantidad);
+	}
 
-    	}
+	function restarcantidad() {
+		var precio = document.getElementById('precio_p1').value;
+		var cantidad = document.getElementById('cantidad_p1').value;
+		if (cantidad > 1) {
+			var nueva_cantidad = parseInt(cantidad) - 1;
+			document.getElementById('cantidad_p1').value = nueva_cantidad;
+			calcular_subtotal(precio, nueva_cantidad);
+		}
 
-    	function calcular_subtotal(precio, cantidad) {
-    		var subtotal = precio * cantidad;
-    		document.getElementById('subtotal').innerHTML = 'S/. ' + subtotal;
-    	}
-    </script>
+	}
 
-    <script>
-    	const estrellas = document.querySelectorAll('.estrella');
+	function calcular_subtotal(precio, cantidad) {
+		var subtotal = precio * cantidad;
+		document.getElementById('subtotal').innerHTML = 'S/. ' + subtotal;
+	}
+</script>
 
-    	estrellas.forEach((estrella) => {
-    		estrella.addEventListener('click', () => {
-    			estrella.classList.toggle('active');
-    		});
-    	});
-    </script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+	const estrellas = document.querySelectorAll('.estrella');
 
-    </html>
+	estrellas.forEach((estrella) => {
+		estrella.addEventListener('click', () => {
+			estrella.classList.toggle('active');
+		});
+	});
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</html>

@@ -22,6 +22,7 @@ if ($tipo == "registrar") {
         
         $estado = $_POST['estado'];
         $fecha_registro = $_POST['fecha_registro'];
+
         $secure_password = password_hash($password,PASSWORD_DEFAULT);
         
         
@@ -29,7 +30,7 @@ if ($tipo == "registrar") {
             $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacíos');
         } else {
            
-            $arrPersona = $objPersona->registrarPersona($nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia, $distrito, $codigo_postal, $direccion, $rol, $secure_password, $estado, $fecha_registro,$secure_password);
+            $arrPersona = $objPersona->registrarPersona($nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia, $distrito, $codigo_postal, $direccion, $rol, $secure_password, $estado, $fecha_registro);
 
             if ($arrPersona->id > 0) {
                 $arr_Respuesta = array('status' => true, 'mensaje' => 'Registro Exitoso');
