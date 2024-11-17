@@ -43,7 +43,7 @@ async function listar_productos() {
             let datos = json.contenido;
             let contenido_select = '<option value="">Seleccione</option>';
             datos.forEach(element => {
-                contenido_select += '<option value="' + element.id + '">' + element.nombre + '</option>';
+                contenido_select += '<option value="' + element.id + '">' + element.nombree + '</option>';
                 //se trabaja con jquery
                 /*$('#categoria').append($('<option />',{
                     text:`${element.nombre}`,
@@ -66,7 +66,7 @@ async function listar_trabajadores() {
             let datos = json.contenido;
             let contenido_select = '<option value="">Seleccione</option>';
             datos.forEach(element => {
-                contenido_select += '<option value="' + element.id + '">' + element.nombre + '</option>';
+                contenido_select += '<option value="' + element.id + '">' + element.razon_social + '</option>';
                 //se trabaja con jquery
                 /*$('#categoria').append($('<option />',{
                     text:`${element.nombre}`,

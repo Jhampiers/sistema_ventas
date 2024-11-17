@@ -60,7 +60,7 @@ if ($tipo=="listar"){
     
        for($i=0; $i < count($arr_Productos); $i++){
           $id_producto = $arr_Categorias[$i]->id;
-          $producto = $arr_Productos[$i]->nombre;
+          $producto = $arr_Productos[$i]->nombree;
           $opciones = '
           <a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>
           ';
