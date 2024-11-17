@@ -14,10 +14,6 @@ async function registrar_compra() {
     try {
     
         const datos = new FormData(frmRegistrar);
-        datos.append('id_producto', id_producto);
-        datos.append('cantidad', cantidad);
-        datos.append('precio', precio);
-        datos.append('id_trabajador', id_trabajador);
 
         let respuesta = await fetch(base_url + 'controller/Compra.php?tipo=registrar', {
             method: 'POST',
@@ -57,7 +53,7 @@ async function listar_productos() {
             document.getElementById('producto').innerHTML = contenido_select;
         }
         console.log(respuesta);
-    }catch{
+    }catch(e){
         console.log("error al cargar productos"+e);
     }
     
@@ -81,7 +77,7 @@ async function listar_trabajadores() {
         }
         console.log(respuesta);
         
-    } catch {
+    } catch(e) {
         console.log("error al cargar trabajadores"+e);
     }
     

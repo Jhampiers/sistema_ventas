@@ -1,4 +1,5 @@
 async function registrar_producto() {
+    //captura los datos del formulario con getEl....y con queryS....para luego enviarlos
     let codigo = document.getElementById('codigo').value;
     let nombree = document.querySelector('#nombree').value;
     let detalle = document.querySelector('#detalle').value;
@@ -8,15 +9,16 @@ async function registrar_producto() {
     let imagen1 = document.querySelector('#imagen1').value;
     let proveedor = document.querySelector('#proveedor').value;
 
+// valida que todos esos campos no esten vacios a la hora de ingresar datos al formulario retorna una alerta si hay un campo vacio
    if (codigo==""|| nombree=="" || detalle=="" || precio==""|| stock=="" || categoria==""|| imagen1==""|| proveedor=="" ) {
     alert ("error, campos vacios");
     return;
 
    }
    try {
-    //capturamos los datos de formulario html
+    //capturamos los datos de formulario html si todo esta bien ya se envia con el metodo fetch
     const datos=new FormData(frmRegistrar);
-    //enviar los datos hacia el controlador
+    //enviar los datos hacia el controlador base_url+'controller/Producto.php?tipo=registrar'
     let respuesta = await fetch(base_url+'controller/Producto.php?tipo=registrar',{
         method: 'POST',
         mode: 'cors',
@@ -24,6 +26,7 @@ async function registrar_producto() {
         body: datos
 
     });
+    //
     json = await respuesta.json();
     if (json.status){
         swal("Registro",json.mensaje,"success");
@@ -39,6 +42,7 @@ async function registrar_producto() {
 
 async function listar_categorias() {
     try{
+        //fetch realiza una solicitud en base_url + 'controller/categoria.php?tipo=listar' donde genera un listado de categorías desde una base de datos
         let respuesta= await fetch(base_url+'controller/categoria.php?tipo=listar');
         json = await respuesta.json();
         if (json.status){

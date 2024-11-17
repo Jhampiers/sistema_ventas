@@ -6,7 +6,6 @@ $objProducto = new ProductoModel();
 if($tipo=="registrar"){
     // print_r($_POST);
     // echo $_FILES['imagen1']['name'];
-    
      if ($_POST){
         $codigo = $_POST['codigo'];
         $nombree = $_POST['nombree'];
@@ -16,10 +15,12 @@ if($tipo=="registrar"){
         $categoria = $_POST['categoria'];
         $imagen1 = 'imagen1';
         $proveedor= $_POST['proveedor'];
+        //valida que los campos no esten vacios sino se envia un mensaje de error
         if ($codigo==""|| $nombree=="" || $detalle=="" ||$precio==""|| $stock=="" || $categoria==""|| $imagen1==""|| $proveedor==""){
             $arr_Respuesta = array('status'=>false,'mensaje'=>'Error,campos vacios');
 
         }else{
+            //Llama al método registrarProducto del modelo para insertar el producto en la base de datos
             $arrProducto = $objProducto->registrarProducto
             ($codigo, $nombree, $detalle, $precio ,$stock ,$categoria ,$imagen1 ,$proveedor);
 
@@ -49,4 +50,28 @@ if($tipo=="registrar"){
 
      }
 }
+
+
+if ($tipo=="listar"){
+   
+    $arr_Respuesta = array('status'=>false, 'contenido'=>'');
+    $arr_Productos = $objProducto->obtener_productos();
+    if (!empty($arr_Productos)){
+    
+       for($i=0; $i < count($arr_Productos); $i++){
+          $id_producto = $arr_Categorias[$i]->id;
+          $producto = $arr_Productos[$i]->nombre;
+          $opciones = '
+          <a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+          ';
+          $arr_Productos[$i]->options = $opciones;
+       }
+       $arr_Respuesta['status'] = true;
+       $arr_Respuesta['contenido'] = $arr_Productos;
+    }
+    echo json_encode( $arr_Respuesta);
+   
+}
+
+
 ?>
