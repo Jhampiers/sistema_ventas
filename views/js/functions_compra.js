@@ -41,16 +41,12 @@ async function listar_productos() {
         json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;
-            let contenido_select = '<option value="">Seleccione</option>';
+            let contenido_select = '<option disabled selected>Seleccione</option>';
             datos.forEach(element => {
                 contenido_select += '<option value="' + element.id + '">' + element.nombree + '</option>';
-                //se trabaja con jquery
-                /*$('#categoria').append($('<option />',{
-                    text:`${element.nombre}`,
-                    value: `${element.id}`
-                }));*/
+
             });
-            document.getElementById('producto').innerHTML = contenido_select;
+            document.getElementById('id_producto').innerHTML = contenido_select;
         }
         console.log(respuesta);
     }catch(e){
@@ -64,16 +60,11 @@ async function listar_trabajadores() {
         json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;
-            let contenido_select = '<option value="">Seleccione</option>';
+            let contenido_select = '<option disabled selected>Seleccione</option>';
             datos.forEach(element => {
                 contenido_select += '<option value="' + element.id + '">' + element.razon_social + '</option>';
-                //se trabaja con jquery
-                /*$('#categoria').append($('<option />',{
-                    text:`${element.nombre}`,
-                    value: `${element.id}`
-                }));*/
             });
-            document.getElementById('trabajador').innerHTML = contenido_select;
+            document.getElementById('id_trabajador').innerHTML = contenido_select;
         }
         console.log(respuesta);
         

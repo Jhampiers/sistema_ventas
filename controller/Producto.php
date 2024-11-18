@@ -52,26 +52,23 @@ if($tipo=="registrar"){
 }
 
 
-if ($tipo=="listar"){
+if ($tipo == "listar"){
    
     $arr_Respuesta = array('status'=>false, 'contenido'=>'');
-    $arr_Productos = $objProducto->obtener_productos();
-    if (!empty($arr_Productos)){
+    $arrProductos = $objProducto->obtener_productos();
+    if (!empty($arrProductos)){
     
-       for($i=0; $i < count($arr_Productos); $i++){
-          $id_producto = $arr_Categorias[$i]->id;
-          $producto = $arr_Productos[$i]->nombree;
-          $opciones = '
-          <a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>
-          ';
-          $arr_Productos[$i]->options = $opciones;
+       for($i = 0; $i < count($arrProductos); $i++){
+          $id_categoria = $arrProductos[$i]->id;
+          $categoria = $arrProductos[$i]->nombree;
+          $opciones = '';
+          $arrProductos[$i]->options = $opciones;
        }
        $arr_Respuesta['status'] = true;
-       $arr_Respuesta['contenido'] = $arr_Productos;
+       $arr_Respuesta['contenido'] = $arrProductos;
     }
     echo json_encode( $arr_Respuesta);
    
 }
-
 
 ?>
