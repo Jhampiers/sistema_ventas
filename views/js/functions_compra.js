@@ -41,7 +41,7 @@ async function listar_productos() {
         json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;
-            let contenido_select = '<option disabled selected>Seleccione</option>';
+            let contenido_select = '<option >Seleccione</option>';
             datos.forEach(element => {
                 contenido_select += '<option value="' + element.id + '">' + element.nombree + '</option>';
 
@@ -60,7 +60,7 @@ async function listar_trabajadores() {
         json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;
-            let contenido_select = '<option disabled selected>Seleccione</option>';
+            let contenido_select = '<option >Seleccione</option>';
             datos.forEach(element => {
                 contenido_select += '<option value="' + element.id + '">' + element.razon_social + '</option>';
             });
