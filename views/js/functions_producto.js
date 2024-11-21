@@ -1,3 +1,42 @@
+//clase
+
+async function listar_productos() {
+    try{
+        let respuesta = await fetch(base_url+'controller/producto.php?tipo=listar');
+        json = await respuesta.json();
+        if (json.status){
+            let datos = json.contenido;
+            let cont = 0;
+            datos.forEach(item => {
+                let nueva_fila = document.createElement("tr");
+                nueva_fila.id = "fila"+item.id;// el primer id es de la fila y el sugundo id es de base de datos
+                cont +=1;
+                nueva_fila.innerHTML = `
+                <th>${cont}</th>
+                <td>${item.codigo}</td>
+                <td>${item.nombree}</td>
+                <td>${item.stock}</td>
+                <td>${item.categoria.nombre}</td>
+                <td>${item.id_proveedor}</td>
+                <td></td>
+
+                `;
+                document.querySelector('#tbl_producto').appendChild(nueva_fila);
+            });
+         
+        }
+        console.log(json);
+    }catch(error){
+        console.log("Oops salio un error"+error);
+    }
+    
+}
+
+if(document.querySelector('#tbl_producto')){
+    listar_productos();
+}
+
+
 async function registrar_producto() {
     //captura los datos del formulario con getEl....y con queryS....para luego enviarlos
     let codigo = document.getElementById('codigo').value;

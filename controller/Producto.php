@@ -1,8 +1,12 @@
 <?php
 require_once('../model/productoModel.php');
+require_once('../model/categoriaModel.php');
+require_once('../model/personaModel.php');
 $tipo= $_REQUEST['tipo'];
 //instancia la clase modelo
 $objProducto = new ProductoModel();
+$objCategoria = new CategoriaModel();
+$objPersona = new PersonaModel();
 if($tipo=="registrar"){
     // print_r($_POST);
     // echo $_FILES['imagen1']['name'];
@@ -55,17 +59,22 @@ if($tipo=="registrar"){
 if ($tipo == "listar"){
    
     $arr_Respuesta = array('status'=>false, 'contenido'=>'');
-    $arrProductos = $objProducto->obtener_productos();
-    if (!empty($arrProductos)){
+    $arr_Productos = $objProducto->obtener_productos();
+    if (!empty($arr_Productos)){
     
-       for($i = 0; $i < count($arrProductos); $i++){
-          $id_categoria = $arrProductos[$i]->id;
-          $categoria = $arrProductos[$i]->nombree;
+       for($i = 0; $i < count($arr_Productos); $i++){
+          //clase verificar
+          $id_categoria = $arr_Productos[$i]->id_categoria;
+          $r_categoria = $objCategoria->obtener_categoria($id_categoria);
+          $arr_Productos[$i]->categoria=$r_categoria;
+
+          $id_producto = $arr_Productos[$i]->id;
+          $producto = $arr_Productos[$i]->nombree;
           $opciones = '';
-          $arrProductos[$i]->options = $opciones;
+          $arr_Productos[$i]->options = $opciones;
        }
        $arr_Respuesta['status'] = true;
-       $arr_Respuesta['contenido'] = $arrProductos;
+       $arr_Respuesta['contenido'] = $arr_Productos;
     }
     echo json_encode( $arr_Respuesta);
    

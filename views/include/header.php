@@ -18,7 +18,7 @@
 
 <body>
 
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 " >
     <nav class="navbar navbar-dark fixed-top" style="background-color:#413FB6; min-height:150px;">
             <div class="container-fluid">
                 <!-- Logo -->
