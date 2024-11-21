@@ -1,5 +1,5 @@
 
-<div class="container form-nproduct">
+<div class="container form-nproduct p-5 mt-5">
 <form action="" id="frmRegistrar" class=" mb-4 border  p-3" style="margin-top:200px;">
     <h4 class="text-center mb-4">Registrar Compra</h4>
     <div>

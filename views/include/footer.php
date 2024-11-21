@@ -1,6 +1,6 @@
 <div class="py-4" style="background-color:#413FB6;">
 	<footer class="container">
-		<div class="row gy-4">
+		<div class="row gy-12">
 			<!-- Contact Section -->
 			<div class="col-12 col-sm-6 col-lg-3">
 				<h5 class="text-white fw-bold mb-3">Contactanos</h5>

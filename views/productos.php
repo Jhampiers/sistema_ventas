@@ -1,7 +1,7 @@
-<div class="col-12" style="margin-top:200px;">
-    <div class="">
-        <table class="table table-hover table-striped table-bordered shadow-sm">
-            <thead class="table-primary">
+<div class="col-12" style="margin:200px 0px 50px 0px;">
+    <div class="p-2">
+        <table class="table table-hover table-striped table-bordered shadow-sm m-0" >
+            <thead class="table-dark">
                 <tr>
                     <th scope="col" class="align-middle">Nro</th>
                     <th scope="col" class="align-middle">Código</th>

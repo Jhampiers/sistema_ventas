@@ -67,7 +67,7 @@ if ($tipo == "listar"){
           $id_categoria = $arr_Productos[$i]->id_categoria;
           $r_categoria = $objCategoria->obtener_categoria($id_categoria);
           $arr_Productos[$i]->categoria=$r_categoria;
-
+        //
           $id_producto = $arr_Productos[$i]->id;
           $producto = $arr_Productos[$i]->nombree;
           $opciones = '';
