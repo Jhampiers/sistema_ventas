@@ -14,18 +14,18 @@ class CompraModel{
         return $sql;
 
     }
-    // //trabajo falta
-    // public function obtener_compras(){
-    //     $arrRespuesta = array();
-    //     $respuesta = $this->conexion->query("SELECT*FROM compras");
-    //     while ($objeto = $respuesta->fetch_object()){
-    //         array_push($arrRespuesta,$objeto);
+    //trabajo falta
+    public function obtener_compras(){
+        $arrRespuesta = array();
+        $respuesta = $this->conexion->query("SELECT*FROM compras");
+        while ($objeto = $respuesta->fetch_object()){
+            array_push($arrRespuesta,$objeto);
             
 
-    //     }
-    //     return $arrRespuesta;
+        }
+        return $arrRespuesta;
         
-    // }
+    }
 
     
 }
