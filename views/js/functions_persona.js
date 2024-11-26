@@ -1,3 +1,39 @@
+
+//trabajo
+async function listar_personas() {
+    try {
+        let respuesta = await fetch(base_url+'controller/persona.php?tipo=listar');
+        json = await respuesta.json();
+        if (json.status) {
+            let datos = json.contenido;
+            let cont = 0;
+            datos.forEach(item => {
+                let nueva_fila = document.createElement("tr");
+                nueva_fila.id = "fila"+item.id;
+                cont +=1;
+                nueva_fila.innerHTML = `
+                <th>${cont}</th>
+                <td>${item.nro_identidad}</td>
+                <td>${item.razon_social}</td>
+                <td>${item.telefono}</td>
+                <td>${item.correo}</td>
+                <td>${item.rol}</td>
+                <td></td>
+                `;
+                document.querySelector('#tbl_persona').appendChild(nueva_fila);
+            });
+        }
+        console.log(json);
+    } catch(error) {
+        console.log("Oops ocurrió un error: "+error);
+    }
+}
+
+if(document.querySelector('#tbl_persona')){
+    listar_personas();
+}
+
+
 async function registrar_persona() {
     
     let nro_identidad = document.getElementById('nro_identidad').value;

@@ -1,4 +1,42 @@
 
+// //clase
+
+// async function listar_compras() {
+//     try{
+//         let respuesta = await fetch(base_url+'controller/compra.php?tipo=listar');
+//         json = await respuesta.json();
+//         if (json.status){
+//             let datos = json.contenido;
+//             let cont = 0;
+//             datos.forEach(item => {
+//                 let nueva_fila = document.createElement("tr");
+//                 nueva_fila.id = "fila"+item.id;// el primer id es de la fila y el sugundo id es de base de datos
+//                 cont +=1;
+//                 nueva_fila.innerHTML = `
+//                 <th>${cont}</th>
+//                 <td>${item.id_producto}</td>
+//                 <td>${item.cantidad}</td>
+//                 <td>${item.precio}</td>
+//                 <td>${item.id_trabajador}</td>
+//                 <td></td>
+
+//                 `;
+//                 document.querySelector('#tbl_compra').appendChild(nueva_fila);
+//             });
+         
+//         }
+//         console.log(json);
+//     }catch(error){
+//         console.log("Oops salio un error"+error);
+//     }
+    
+// }
+
+// if(document.querySelector('#tbl_compra')){
+//     listar_compras();
+// }
+
+
 
 async function registrar_compra() {
     let id_producto = document.getElementById('id_producto').value;

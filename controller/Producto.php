@@ -60,6 +60,7 @@ if ($tipo == "listar"){
    
     $arr_Respuesta = array('status'=>false, 'contenido'=>'');
     $arr_Productos = $objProducto->obtener_productos();
+    
     if (!empty($arr_Productos)){
     
        for($i = 0; $i < count($arr_Productos); $i++){
@@ -68,6 +69,10 @@ if ($tipo == "listar"){
           $r_categoria = $objCategoria->obtener_categoria($id_categoria);
           $arr_Productos[$i]->categoria=$r_categoria;
         //
+          $id_persona = $arr_Productos[$i]->id_proveedor;
+          $r_persona = $objPersona->obtener_persona($id_persona);
+          $arr_Productos[$i]->proveedor=$r_persona;
+
           $id_producto = $arr_Productos[$i]->id;
           $producto = $arr_Productos[$i]->nombree;
           $opciones = '';

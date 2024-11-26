@@ -17,7 +17,7 @@ async function listar_productos() {
                 <td>${item.nombree}</td>
                 <td>${item.stock}</td>
                 <td>${item.categoria.nombre}</td>
-                <td>${item.id_proveedor}</td>
+                <td>${item.proveedor.razon_social}</td>
                 <td></td>
 
                 `;

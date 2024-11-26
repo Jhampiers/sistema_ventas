@@ -30,14 +30,13 @@ if ($tipo=="listar"){
    
     $arr_Respuesta = array('status'=>false, 'contenido'=>'');
     $arr_Categorias = $objCategoria->obtener_categorias();
+
     if (!empty($arr_Categorias)){
     
        for($i=0; $i < count($arr_Categorias); $i++){
           $id_categoria = $arr_Categorias[$i]->id;
           $categoria = $arr_Categorias[$i]->nombre;
-          $opciones = '
-          <a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>
-          ';
+          $opciones = '';
           $arr_Categorias[$i]->options = $opciones;
        }
        $arr_Respuesta['status'] = true;
