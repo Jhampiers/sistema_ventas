@@ -86,7 +86,7 @@
                             <i class="fas fa-sign-out-alt"></i>
                             <span class="ms-1">Cerrar Sesión</span>
                         </a>
-                        <button><?php echo $_SESSION['sesion_ventas_nombres']?></button>
+                        <!-- <button><?php echo $_SESSION['sesion_ventas_nombres']?></button> -->
                     </div>
                 </div>
 
