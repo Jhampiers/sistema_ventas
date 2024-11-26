@@ -67,7 +67,7 @@
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>profile">
-                                    <i class="fas fa-user-circle me-2"></i>Perfil
+                                    <i class="fas fa-user-circle me-2"></i>Panel Admin
                                 </a>
                             </div>
                         </div>
