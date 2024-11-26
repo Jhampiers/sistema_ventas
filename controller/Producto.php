@@ -25,10 +25,10 @@ if($tipo=="registrar"){
 
         }else{
             //Llama al método registrarProducto del modelo para insertar el producto en la base de datos
-            $arrProducto = $objProducto->registrarProducto
-            ($codigo, $nombree, $detalle, $precio ,$stock ,$categoria ,$imagen1 ,$proveedor);
+            $arrProducto = $objProducto->registrarProducto($codigo, $nombree, $detalle, $precio ,$stock ,$categoria ,$imagen1 ,$proveedor);
 
-            if($arrProducto->id>0){
+            if($arrProducto->id_n>0){
+                $newid = $arrProducto->id_n;
                 $arr_Respuesta = array('status'=>true,
                 'mensaje'=>'Registro Exitoso');
                 //cargar archivos
@@ -36,7 +36,7 @@ if($tipo=="registrar"){
                 $destino = './assets/img_productos/';
                 $tipoArchivo = strtolower(pathinfo($_FILES["imagen1"]["name"],PATHINFO_EXTENSION));
 
-                $nombre = $arrProducto->id.".".$tipoArchivo;
+                $nombre = $arrProducto->id_n.".".$tipoArchivo;
 
                 if(move_uploaded_file($archivo,$destino.$nombre)){
                     $arr_imagen = $objProducto->actualizar_imagen($id,$nombre);

@@ -1,40 +1,40 @@
 
-// //clase
+//clase
 
-// async function listar_compras() {
-//     try{
-//         let respuesta = await fetch(base_url+'controller/compra.php?tipo=listar');
-//         json = await respuesta.json();
-//         if (json.status){
-//             let datos = json.contenido;
-//             let cont = 0;
-//             datos.forEach(item => {
-//                 let nueva_fila = document.createElement("tr");
-//                 nueva_fila.id = "fila"+item.id;// el primer id es de la fila y el sugundo id es de base de datos
-//                 cont +=1;
-//                 nueva_fila.innerHTML = `
-//                 <th>${cont}</th>
-//                 <td>${item.id_producto}</td>
-//                 <td>${item.cantidad}</td>
-//                 <td>${item.precio}</td>
-//                 <td>${item.id_trabajador}</td>
-//                 <td></td>
+async function listar_compras() {
+    try{
+        let respuesta = await fetch(base_url+'controller/Compra.php?tipo=listar');
+        json = await respuesta.json();
+        if (json.status){
+            let datos = json.contenido;
+            let cont = 0;
+            datos.forEach(item => {
+                let nueva_fila = document.createElement("tr");
+                nueva_fila.id = "fila"+item.id;// el primer id es de la fila y el sugundo id es de base de datos
+                cont +=1;
+                nueva_fila.innerHTML = `
+                <th>${cont}</th>
+                <td>${item.producto.nombree}</td>
+                <td>${item.cantidad}</td>
+                <td>${item.precio}</td>
+                <td>${item.persona.razon_social}</td>
+                <td></td>
 
-//                 `;
-//                 document.querySelector('#tbl_compra').appendChild(nueva_fila);
-//             });
+                `;
+                document.querySelector('#tbl_compra').appendChild(nueva_fila);
+            });
          
-//         }
-//         console.log(json);
-//     }catch(error){
-//         console.log("Oops salio un error"+error);
-//     }
+        }
+        console.log(json);
+    }catch(error){
+        console.log("Oops salio un error"+error);
+    }
     
-// }
+}
 
-// if(document.querySelector('#tbl_compra')){
-//     listar_compras();
-// }
+if(document.querySelector('#tbl_compra')){
+    listar_compras();
+}
 
 
 
