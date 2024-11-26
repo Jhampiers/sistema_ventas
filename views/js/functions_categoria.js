@@ -14,7 +14,10 @@ async function listar_categorias() {
                 <th>${cont}</th>
                 <td>${item.nombre}</td>
                 <td>${item.detalle}</td>
-                <td></td>
+                <td>
+                <button class="btn btn-primary">Editar</button>
+                <button class="btn btn-danger">Eliminar</
+                </td>
                 `;
                 document.querySelector('#tbl_categoria').appendChild(nueva_fila);
             });

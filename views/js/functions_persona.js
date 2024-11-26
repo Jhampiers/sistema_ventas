@@ -18,7 +18,10 @@ async function listar_personas() {
                 <td>${item.telefono}</td>
                 <td>${item.correo}</td>
                 <td>${item.rol}</td>
-                <td></td>
+                <td>
+                <button class="btn btn-primary">Editar</button>
+                <button class="btn btn-danger">Eliminar</
+                </td>
                 `;
                 document.querySelector('#tbl_persona').appendChild(nueva_fila);
             });

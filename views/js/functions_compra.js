@@ -18,7 +18,10 @@ async function listar_compras() {
                 <td>${item.cantidad}</td>
                 <td>${item.precio}</td>
                 <td>${item.persona.razon_social}</td>
-                <td></td>
+                <td>
+                <button class="btn btn-primary">Editar</button>
+                <button class="btn btn-danger">Eliminar</
+                </td>
 
                 `;
                 document.querySelector('#tbl_compra').appendChild(nueva_fila);
