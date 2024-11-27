@@ -18,3 +18,4 @@
     </div>
 </div>
 <script src="<?php echo BASE_URL;?>views/js/functions_producto.js"></script>
+
