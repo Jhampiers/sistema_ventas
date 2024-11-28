@@ -24,30 +24,27 @@ if($tipo=="registrar"){
             $arr_Respuesta = array('status'=>false,'mensaje'=>'Error,campos vacios');
 
         }else{
+            //cargar archivos
+            $archivo = $_FILES['imagen1']['tmp_name'];
+            $destino = '../assets/img_productos/';
+            $tipo_archivo = strtolower(pathinfo($_FILES["imagen1"]["name"], PATHINFO_EXTENSION));
             //Llama al método registrarProducto del modelo para insertar el producto en la base de datos
-            $arrProducto = $objProducto->registrarProducto($codigo, $nombree, $detalle, $precio ,$stock ,$categoria ,$imagen1 ,$proveedor);
+            $arrProducto = $objProducto->registrarProducto($codigo, $nombree, $detalle, $precio ,$stock ,$categoria ,$imagen1 ,$proveedor ,$tipo_archivo
+            );
 
-            if($arrProducto->id_n>0){
+            if($arrProducto->id_n > 0){
                 $newid = $arrProducto->id_n;
-                $arr_Respuesta = array('status'=>true,
-                'mensaje'=>'Registro Exitoso');
-                //cargar archivos
-                $archivo = $_FILES['imagen1']['tmp_name'];
-                $destino = './assets/img_productos/';
-                $tipoArchivo = strtolower(pathinfo($_FILES["imagen1"]["name"],PATHINFO_EXTENSION));
-
-                $nombre = $arrProducto->id_n.".".$tipoArchivo;
+                $arr_Respuesta = array('status'=>true,'mensaje'=>'Registro Exitoso');
+                $nombre = $arrProducto->id_n . "." . $tipo_archivo;
 
                 if(move_uploaded_file($archivo,$destino.$nombre)){
-                    $arr_imagen = $objProducto->actualizar_imagen($id,$nombre);
+                    // $arr_imagen = $objProducto->actualizar_imagen($id,$nombre);
                 }else{
-                    $arr_Respuesta = array('status'=>true,
-                    'mensaje'=>'Registro Exitoso, error al subir imagen');
+                    $arr_Respuesta = array('status'=>true,'mensaje'=>'Registro Exitoso, error al subir imagen');
                 }
 
             }else{
-                $arr_Respuesta = array('status'=>false,
-                'mensaje'=>'Error al registrar el producto');
+                $arr_Respuesta = array('status'=>false,'mensaje'=>'Error al registrar el producto');
             }
             echo json_encode($arr_Respuesta);
         }

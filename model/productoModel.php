@@ -9,9 +9,9 @@ class ProductoModel{
     }
 
     //Inserta un nuevo producto en la base de datos llamando a un procedimiento almacenado que es insertproducto.
-    public function registrarProducto($codigo, $nombree, $detalle, $precio, $stock, $categoria, $imagen1, $proveedor){
+    public function registrarProducto($codigo, $nombree, $detalle, $precio, $stock, $categoria, $imagen1, $proveedor ,$tipo_archivo){
         $sql = $this->conexion->query("CALL
-        insertproducto('{$codigo}','{$nombree}','{$detalle}','{$precio }','{$stock}','{$categoria}','{$imagen1 }','{$proveedor}')");
+        insertproducto('{$codigo}','{$nombree}','{$detalle}','{$precio }','{$stock}','{$categoria}','{$imagen1 }','{$proveedor}','{$tipo_archivo}')");
         $sql = $sql->fetch_object();
         return $sql;
 
