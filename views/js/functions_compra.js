@@ -78,7 +78,7 @@ async function registrar_compra() {
 
 async function listar_productos() {
     try{
-        let respuesta = await fetch(base_url+'controller/producto.php?tipo=listar');
+        let respuesta = await fetch(base_url+'controller/Producto.php?tipo=listar');
         json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;
@@ -97,7 +97,7 @@ async function listar_productos() {
 }
 async function listar_trabajadores() {
     try {
-        let respuesta = await fetch(base_url+'controller/trabajador.php?tipo=listar');
+        let respuesta = await fetch(base_url+'controller/Trabajador.php?tipo=listar');
         json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;
