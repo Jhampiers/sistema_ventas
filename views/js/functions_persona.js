@@ -2,7 +2,7 @@
 //trabajo
 async function listar_personas() {
     try {
-        let respuesta = await fetch(base_url+'controller/persona.php?tipo=listar');
+        let respuesta = await fetch(base_url+'controller/Persona.php?tipo=listar');
         json = await respuesta.json();
         if (json.status) {
             let datos = json.contenido;
