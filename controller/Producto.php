@@ -72,7 +72,10 @@ if ($tipo == "listar"){
 
           $id_producto = $arr_Productos[$i]->id;
           $producto = $arr_Productos[$i]->nombree;
-          $opciones = '';
+          //localhost/editar-producto/2
+          $opciones = '<a href="'.BASE_URL.'editar-producto/'.$id_producto .'" class="btn btn-primary btn-sm">Editar</a> 
+              <button class="btn btn-danger btn-sm" onclick="eliminar_producto('.$id_producto .');">Eliminar</button>';
+
           $arr_Productos[$i]->options = $opciones;
        }
        $arr_Respuesta['status'] = true;
@@ -80,6 +83,21 @@ if ($tipo == "listar"){
     }
     echo json_encode( $arr_Respuesta);
    
+}
+if($tipo == "ver"){
+    // print_r($_POST);//todo codigo con print_r debe estar comentado
+    $id_producto = $_POST['id_producto'];
+    $arr_Respuesta = $objProducto->verProducto($id_producto);
+    // print_r($arr_Respuesta);
+    //si no hay ese producto con ese id 
+    if(empty($arr_Respuesta)){
+
+        $response = array('estatus'=>false, 'mensaje'=>"Error, no hay informacion");
+    }else{
+        $response = array('status'=>true,'mensaje'=>"datos encontrados", 'contenido'=>$arr_Respuesta);
+
+    }
+    echo json_encode($response);
 }
 
 ?>

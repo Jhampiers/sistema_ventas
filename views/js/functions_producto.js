@@ -18,11 +18,7 @@ async function listar_productos() {
                 <td>${item.stock}</td>
                 <td>${item.categoria.nombre}</td>
                 <td>${item.proveedor.razon_social}</td>
-                <td>
-                <button class="btn btn-primary">Editar</button>
-                <button class="btn btn-danger">Eliminar</
-                </td>
-
+                <td>${item.options}</td>
                 `;
                 document.querySelector('#tbl_producto').appendChild(nueva_fila);
             });
@@ -134,3 +130,34 @@ async function listar_proveedores() {
     }
 }
 
+async function ver_producto(id) {
+    const formData = new FormData();
+    formData.append('id_producto', id);
+    try {
+        let respuesta = await fetch(base_url+'controller/Producto.php?tipo=ver',{
+            method:'POST',
+            mode:'cors',
+            cache:'no-cache',
+            body:formData
+        });
+        json = await respuesta.json();
+        if(json.status){
+            document.querySelector('#codigo').value = json.contenido.codigo;
+            document.querySelector('#nombree').value = json.contenido.nombree;
+            document.querySelector('#detalle').value = json.contenido.detalle;
+            document.querySelector('#precio').value = json.contenido.precio;
+            document.querySelector('#categoria').value = json.contenido.categoria;
+            document.querySelector('#imagen1').value = json.contenido.imagen1;
+            document.querySelector('#proveedor').value = json.contenido.proveedor;
+         
+        }else{
+            window.location = base_url+"productos";
+        }
+        
+        console.log(json);
+        
+    } catch (error) {
+        console.log("oops ocurrio un error "+error);
+        
+    }
+}
