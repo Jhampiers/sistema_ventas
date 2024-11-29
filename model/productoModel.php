@@ -37,7 +37,7 @@ class ProductoModel{
         $objeto = $respuesta->fetch_object();
         return $objeto;
     }
-
+   // clase final
     public function verProducto($id){
         $sql = $this->conexion->query("SELECT*FROM producto WHERE id='$id'");
         $sql = $sql->fetch_object();
