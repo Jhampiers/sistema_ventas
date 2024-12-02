@@ -84,7 +84,7 @@ if ($tipo == "listar"){
     echo json_encode( $arr_Respuesta);
    
 }
-if($tipo == "ver"){
+if($tipo == 'ver'){
     // print_r($_POST);//todo codigo con print_r debe estar comentado
     $id_producto = $_POST['id_producto'];
     $arr_Respuesta = $objProducto->verProducto($id_producto);
@@ -92,7 +92,7 @@ if($tipo == "ver"){
     //si no hay ese producto con ese id 
     if(empty($arr_Respuesta)){
 
-        $response = array('estatus'=>false, 'mensaje'=>"Error, no hay informacion");
+        $response = array('status'=>false, 'mensaje'=>"Error, no hay informacion.");
     }else{
         $response = array('status'=>true,'mensaje'=>"datos encontrados", 'contenido'=>$arr_Respuesta);
 
