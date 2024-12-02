@@ -43,6 +43,7 @@
 </form>
 <script>listar_categorias();</script>
 <script>listar_proveedores()</script>
+
 <script>
     const id_p=<?php $pagina=explode("/", $_GET['views']); echo $pagina['1'];?>;
     ver_producto(id_p);

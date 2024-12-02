@@ -130,15 +130,16 @@ async function listar_proveedores() {
     }
 }
 
+//clase final
 async function ver_producto(id) {
     const formData = new FormData();
     formData.append('id_producto', id);
     try {
         let respuesta = await fetch(base_url+'controller/Producto.php?tipo=ver',{
-            method:'POST',
-            mode:'cors',
-            cache:'no-cache',
-            body:formData
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData
         });
         json = await respuesta.json();
         if(json.status){
@@ -151,7 +152,7 @@ async function ver_producto(id) {
             document.querySelector('#proveedor').value = json.contenido.proveedor;
          
         }else{
-            window.location = base_url+"productos";
+            window.location = base_url + "productos";
         }
         
         console.log(json);
