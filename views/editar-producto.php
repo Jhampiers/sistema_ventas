@@ -41,8 +41,9 @@
     <button type="button" class="btn btn-primary" onclick="actualizar_producto();">Actualizar</button>
     </div>
 </form>
+<script src="<?php echo BASE_URL;?>views/js/functions_producto.js"></script>
 <script>listar_categorias();</script>
-<script>listar_proveedores()</script>
+<script>listar_proveedores();</script>
 
 <script>
     const id_p=<?php $pagina=explode("/", $_GET['views']); echo $pagina['1'];?>;
