@@ -13,6 +13,7 @@
     <script>
         const base_url = '<?php echo BASE_URL; ?>';
     </script>
+    
 </head>
 <script src="https://kit.fontawesome.com/f244ab63ac.js" crossorigin="anonymous"></script>
 
