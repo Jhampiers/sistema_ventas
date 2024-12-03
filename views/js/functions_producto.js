@@ -147,9 +147,9 @@ async function ver_producto(id) {
             document.querySelector('#nombree').value = json.contenido.nombree;
             document.querySelector('#detalle').value = json.contenido.detalle;
             document.querySelector('#precio').value = json.contenido.precio;
-            document.querySelector('#categoria').value = json.contenido.categoria;
+            document.querySelector('#categoria').value = json.contenido.id_categoria;
             document.querySelector('#imagen1').value = json.contenido.imagen1;
-            document.querySelector('#proveedor').value = json.contenido.proveedor;
+            document.querySelector('#proveedor').value = json.contenido.id_proveedor;
          
         }else{
             window.location = base_url + "productos";
