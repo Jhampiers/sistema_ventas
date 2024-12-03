@@ -86,9 +86,11 @@ if ($tipo == "listar"){
 }
 
 //clase final
-if($tipo == "ver"){
+if($tipo == 'ver'){
+    //para ver si esta mostrando la informacion
     // print_r($_POST);//todo codigo con print_r debe estar comentado
     $id_producto = $_POST['id_producto'];
+    //funcion flecha para llamar a una funcion
     $arr_Respuesta = $objProducto->verProducto($id_producto);
     // print_r($arr_Respuesta);
     //si no hay ese producto con ese id 
