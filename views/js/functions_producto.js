@@ -144,15 +144,15 @@ async function ver_producto(id) {
         json = await respuesta.json();
         if(json.status){
             //clase 2
-            document.querySelector('#id_producto').value = json.contenido.codigo;
+            document.querySelector('#id_producto').value = json.contenido.id;
             document.querySelector('#codigo').value = json.contenido.codigo;
             document.querySelector('#nombree').value = json.contenido.nombree;
             document.querySelector('#detalle').value = json.contenido.detalle;
             document.querySelector('#precio').value = json.contenido.precio;
             document.querySelector('#categoria').value = json.contenido.id_categoria;
-            document.querySelector('#imagen1').value = json.contenido.imagen1;
+            // document.querySelector('#imagen1').value = json.contenido.imagen1;
             document.querySelector('#proveedor').value = json.contenido.id_proveedor;
-            document.querySelector('#img').value = json.contenido.id_proveedor;
+            document.querySelector('#img').value = json.contenido.imagen;
          
         }else{
             window.location = base_url + "productos";

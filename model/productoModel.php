@@ -45,8 +45,8 @@ class ProductoModel{
     }
 
   // clase final2
-  public function actualizarProducto($id, $nombre, $detalle, $precio, $categoria, $fecha_v, $proveedor){
-    $sql = $this->conexion->query("CALL actualizarproducto('{$id}','{$nombre}','{$detalle}','{$precio}','{$categoria}','{$fecha_v}','{$proveedor}')");
+  public function actualizarProducto($id, $nombree, $detalle, $precio, $categoria,$proveedor){
+    $sql = $this->conexion->query("CALL actualizarproducto('{$id}','{$nombree}','{$detalle}','{$precio}','{$categoria}','{$proveedor}')");
     $sql = $sql->fetch_object();
     return $sql;
 }
