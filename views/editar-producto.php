@@ -1,10 +1,12 @@
 
 <div class="container form-nproduct">
-<form action="" id="frmRegistrar" class=" mb-4 border  p-3" style="margin-top:200px">
+<form action="" id="frmActualizar" class=" mb-4 border  p-3" style="margin-top:200px">
+    <input type="hidden" name="id_producto" id="id_producto">
+    <input type="hidden" name="img" id="img">
     <h4 class="text-center mb-4">Editar Producto</h4>
     <div>
         <label for=""> codigo: </label>
-            <input type="number"  class="form-control" id="codigo" name="codigo" >
+            <input type="number"  class="form-control" id="codigo" name="codigo" disabled >
     </div>
     
     <div>
@@ -38,7 +40,7 @@
     </div>
     <br>
     
-    <button type="button" class="btn btn-primary" onclick="registrar_producto();">Actualizar</button>
+    <button type="button" class="btn btn-primary" onclick="actualizar_producto();">Actualizar</button>
     </div>
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_producto.js"></script>

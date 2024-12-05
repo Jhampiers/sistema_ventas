@@ -143,6 +143,8 @@ async function ver_producto(id) {
         });
         json = await respuesta.json();
         if(json.status){
+            //clase 2
+            document.querySelector('#id_producto').value = json.contenido.codigo;
             document.querySelector('#codigo').value = json.contenido.codigo;
             document.querySelector('#nombree').value = json.contenido.nombree;
             document.querySelector('#detalle').value = json.contenido.detalle;
@@ -150,6 +152,7 @@ async function ver_producto(id) {
             document.querySelector('#categoria').value = json.contenido.id_categoria;
             document.querySelector('#imagen1').value = json.contenido.imagen1;
             document.querySelector('#proveedor').value = json.contenido.id_proveedor;
+            document.querySelector('#img').value = json.contenido.id_proveedor;
          
         }else{
             window.location = base_url + "productos";
@@ -160,6 +163,22 @@ async function ver_producto(id) {
     } catch (error) {
         console.log("oops ocurrio un error "+error);
         
+    }
+}
+//clase 2
+async function actualizar_producto() {
+    const datos = new FormData(frmActualizar);
+    try {
+        let respuesta = await fetch(base_url + 'controller/Producto.php?tipo=actualizar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        console.log(json);
+    } catch (e) {
+
     }
 }
 

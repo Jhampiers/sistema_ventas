@@ -105,4 +105,6 @@ if($tipo == 'ver'){
     echo json_encode($response);
 }
 
+//clase 2
+
 ?>
