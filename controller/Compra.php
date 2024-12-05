@@ -52,7 +52,8 @@ if ($tipo == "listar"){
           $arr_Compras[$i]->persona=$r_persona;
 
           $id_compra = $arr_Compras[$i]->id;
-          $opciones = '';
+          $opciones = '<a href="'.BASE_URL.'editar-compra/'.$id_compra.'">Editar</a> 
+              <button onclick="eliminar_compra('.$id_compra.');">Eliminar</button>';
           $arr_Compras[$i]->options = $opciones;
        }
        $arr_Respuesta['status'] = true;
@@ -60,6 +61,27 @@ if ($tipo == "listar"){
     }
     echo json_encode( $arr_Respuesta);
    
+}
+
+
+//clase final
+if($tipo == 'ver'){
+    //para ver si esta mostrando la informacion
+    // print_r($_POST);//todo codigo con print_r debe estar comentado
+    $id_compra = $_POST['id_compra'];
+    //funcion flecha para llamar a una funcion
+    $arr_Respuesta = $objCompra->verCompra($id_compra);
+    // print_r($arr_Respuesta);
+    //si no hay ese producto con ese id 
+    if(empty($arr_Respuesta)){
+
+        $response = array('status'=>false, 'mensaje'=>"Error, no hay informacion");
+
+    }else{
+        $response = array('status'=>true,'mensaje'=>"datos encontrados", 'contenido'=>$arr_Respuesta);
+
+    }
+    echo json_encode($response);
 }
 
 ?>

@@ -18,10 +18,7 @@ async function listar_compras() {
                 <td>${item.cantidad}</td>
                 <td>${item.precio}</td>
                 <td>${item.persona.razon_social}</td>
-                <td>
-                <button class="btn btn-primary">Editar</button>
-                <button class="btn btn-danger">Eliminar</
-                </td>
+                <td>${item.options}</td>
 
                 `;
                 document.querySelector('#tbl_compra').appendChild(nueva_fila);
@@ -113,6 +110,36 @@ async function listar_trabajadores() {
         console.log("error al cargar trabajadores"+e);
     }
     
+}
+
+//clase final
+async function ver_compra(id) {
+    const formData = new FormData();
+    formData.append('id_compra', id);
+    try {
+        let respuesta = await fetch(base_url+'controller/Compra.php?tipo=ver',{
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData
+        });
+        json = await respuesta.json();
+        if(json.status){
+            document.querySelector('#id_producto').value = json.contenido.id_producto;
+            document.querySelector('#cantidad').value = json.contenido.cantidad;
+            document.querySelector('#precio').value = json.contenido.precio;
+            document.querySelector('#id_trabajador').value = json.contenido.id_trabajador;
+         
+        }else{
+            window.location = base_url + "compras";
+        }
+        
+        console.log(json);
+        
+    } catch (error) {
+        console.log("oops ocurrio un error "+error);
+        
+    }
 }
 
 

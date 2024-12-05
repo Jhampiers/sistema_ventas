@@ -162,3 +162,4 @@ async function ver_producto(id) {
         
     }
 }
+

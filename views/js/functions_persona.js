@@ -18,10 +18,7 @@ async function listar_personas() {
                 <td>${item.telefono}</td>
                 <td>${item.correo}</td>
                 <td>${item.rol}</td>
-                <td>
-                <button class="btn btn-primary">Editar</button>
-                <button class="btn btn-danger">Eliminar</
-                </td>
+                 <td>${item.options}</td>
                 `;
                 document.querySelector('#tbl_persona').appendChild(nueva_fila);
             });
@@ -97,5 +94,42 @@ async function registrar_persona() {
         console.log(json);
     } catch (e) {
         console.log("Oops, ocurrió un error: " + e);
+    }
+}
+
+//clase final
+async function ver_persona(id) {
+    const formData = new FormData();
+    formData.append('id_persona', id);
+    try {
+        let respuesta = await fetch(base_url+'controller/Persona.php?tipo=ver',{
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData
+        });
+        json = await respuesta.json();
+        if(json.status){
+            document.querySelector('#nro_identidad').value = json.contenido.nro_identidad;
+            document.querySelector('#razon_social').value = json.contenido.razon_social;
+            document.querySelector('#telefono').value = json.contenido.telefono;
+            document.querySelector('#correo').value = json.contenido.correo;
+            document.querySelector('#departamento').value = json.contenido.departamento;
+            document.querySelector('#provincia').value = json.contenido.provincia;
+            document.querySelector('#distrito').value = json.contenido.distrito;
+            document.querySelector('#codigo_postal').value = json.contenido.codigo_postal;
+            document.querySelector('#direccion').value = json.contenido.direccion;
+            document.querySelector('#rol').value = json.contenido.rol;
+            document.querySelector('#estado').value = json.contenido.estado;
+         
+        }else{
+            window.location = base_url + "personas";
+        }
+        
+        console.log(json);
+        
+    } catch (error) {
+        console.log("oops ocurrio un error "+error);
+        
     }
 }

@@ -26,6 +26,12 @@ class CompraModel{
         return $arrRespuesta;
         
     }
+     // clase final
+     public function verCompra($id){
+        $sql = $this->conexion->query("SELECT*FROM compras WHERE id='$id'");
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
 
     
 }

@@ -33,6 +33,13 @@ class CategoriaModel{
         $objeto = $respuesta->fetch_object();
         return $objeto;
     }
+     // clase final
+     public function verCategoria($id){
+        $sql = $this->conexion->query("SELECT*FROM categoria WHERE id='$id'");
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
+
 
 }
 
