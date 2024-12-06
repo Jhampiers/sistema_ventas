@@ -69,5 +69,31 @@ if($tipo == 'ver'){
 }
 
 
+//clase 2
+
+if($tipo == "actualizar" ){
+    $id_producto = $_POST['id_producto'];
+    $nombree = $_POST['nombre'];
+    $detalle = $_POST['detalle'];
+    
+    if ($nombree == "" || $detalle == "" || $precio == "" || $categoria == "" || $proveedor == "") {
+        //repuesta
+        $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacíos');
+    } else {
+        $arrProducto = $objProducto->actualizarCategoria($id_producto, $nombre, $detalle);
+        if ($arrProducto->p_id > 0) {
+            $arr_Respuesta = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
+
+        } else {
+            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar producto');
+        }
+    }
+    echo json_encode($arr_Respuesta);
+
+}
+if ($tipo == "eliminar") {
+    
+}
+
 
 ?>

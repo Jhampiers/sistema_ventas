@@ -95,3 +95,21 @@ async function ver_categoria(id) {
     }
 }
 
+//clase 2
+async function actualizar_categoria() {
+    const datos = new FormData(frmActualizar);
+    try {
+        let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=actualizar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        console.log(json);
+    } catch (e) {
+
+    }
+}
+
+

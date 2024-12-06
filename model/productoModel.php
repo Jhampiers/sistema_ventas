@@ -49,7 +49,7 @@ class ProductoModel{
     $sql = $this->conexion->query("CALL actualizarproducto('{$id}','{$nombree}','{$detalle}','{$precio}','{$categoria}','{$proveedor}')");
     $sql = $sql->fetch_object();
     return $sql;
-}
+  }
 
 }
 ?>

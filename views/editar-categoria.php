@@ -1,6 +1,6 @@
 
 <div class="container form-nproduct">
-<form action="" id="frmRegistrar" class=" mb-4 border  p-3" style="margin-top:200px;">
+<form action="" id="frmActualizar" class=" mb-4 border  p-3" style="margin-top:200px;">
     <h4 class="text-center mb-4">Editar Categoría</h4>
     <div>
         <label for=""> nombre: </label>
@@ -11,7 +11,7 @@
             <input type="text" class="form-control" id="detalle" name="detalle" >
     </div>
    
-    <button type="button" class="btn btn-primary mt-3" onclick="registrar_categoria();">registrar</button>
+    <button type="button" class="btn btn-primary mt-3" onclick="actualizar_categoria();">Actualizar</button>
     </div>
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_categoria.js"></script>

@@ -40,6 +40,13 @@ class CategoriaModel{
         return $sql;
     }
 
+     // clase final2
+    public function actualizarCategoria($id, $nombre, $detalle){
+    $sql = $this->conexion->query("CALL actualizarcategoria('{$id}','{$nombre}','{$detalle}')");
+    $sql = $sql->fetch_object();
+    return $sql;
+  }
+
 
 }
 
