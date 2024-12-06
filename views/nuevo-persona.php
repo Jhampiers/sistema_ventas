@@ -56,7 +56,12 @@
             <input type="date" class="form-control" id="fecha_registro" name="fecha_registro" >
     </div>
    
-    <button type="button" class="btn btn-primary mt-3" onclick="registrar_persona();">registrar</button>
+    <div class="mt-4">
+    <button type="button" class="btn btn-primary" onclick="registrar_persona();">Registrar</button>
+    <button type="button" class="btn btn-secondary" onclick="window.history.back();" style="float: right;">
+        <i class="fas fa-arrow-left"></i> Volver
+    </button>
+   </div>
     </div>
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_persona.js"></script>

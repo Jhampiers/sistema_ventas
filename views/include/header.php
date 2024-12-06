@@ -67,7 +67,7 @@
                                     <i class="fas fa-user-plus me-2"></i>Registrarse
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>profile">
+                                <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>Admin">
                                     <i class="fas fa-user-circle me-2"></i>Panel Admin
                                 </a>
                             </div>

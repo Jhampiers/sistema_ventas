@@ -24,7 +24,12 @@
             
     </div>
    
-    <button type="button" class="btn btn-primary mt-3" onclick="registrar_compra();">registrar</button>
+    <div class="mt-4">
+    <button type="button" class="btn btn-primary" onclick="registrar_compra();">Registrar</button>
+    <button type="button" class="btn btn-secondary" onclick="window.history.back();" style="float: right;">
+        <i class="fas fa-arrow-left"></i> Volver
+    </button>
+   </div>
     </div>
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_compra.js"></script>

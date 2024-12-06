@@ -41,8 +41,16 @@
     </div>
     <br>
     
-    <button type="button" class="btn btn-primary" onclick="registrar_producto();">registrar</button>
+    <div class="mt-4">
+    <button type="button" class="btn btn-primary" onclick="registrar_producto();">Registrar</button>
+    <button type="button" class="btn btn-secondary" onclick="window.history.back();" style="float: right;">
+        <i class="fas fa-arrow-left"></i> Volver
+    </button>
+   </div>
+
     </div>
+    
+   
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_producto.js"></script>
 <script>listar_categorias();</script>

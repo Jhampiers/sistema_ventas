@@ -11,7 +11,12 @@
             <input type="text" class="form-control" id="detalle" name="detalle" >
     </div>
    
-    <button type="button" class="btn btn-primary mt-3" onclick="registrar_categoria();">registrar</button>
+    <div class="mt-4">
+    <button type="button" class="btn btn-primary" onclick="registrar_categoria();">Registrar</button>
+    <button type="button" class="btn btn-secondary" onclick="window.history.back();" style="float: right;">
+        <i class="fas fa-arrow-left"></i> Volver
+    </button>
+   </div>
     </div>
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_categoria.js"></script>
