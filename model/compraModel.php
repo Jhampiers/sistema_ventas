@@ -33,6 +33,14 @@ class CompraModel{
         return $sql;
     }
 
+     // clase final2
+  public function actualizarCompra($id, $id_producto, $cantidad, $precio, $id_trabajador){
+    $sql = $this->conexion->query("CALL actualizarcompras('{$id}','{$id_producto}','{$cantidad}','{$precio}','{$id_trabajador}')");
+    $sql = $sql->fetch_object();
+    return $sql;
+  }
+
+
     
 }
 ?>

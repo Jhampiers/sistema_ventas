@@ -36,8 +36,8 @@ if ($tipo=="listar"){
        for($i=0; $i < count($arr_Categorias); $i++){
           $id_categoria = $arr_Categorias[$i]->id;
           $categoria = $arr_Categorias[$i]->nombre;
-          $opciones = '<a href="'.BASE_URL.'editar-categoria/'.$id_categoria.'">Editar</a> 
-              <button onclick="eliminar_categoria('.$id_categoria.');">Eliminar</button>';
+          $opciones = '<a href="'.BASE_URL.'editar-categoria/'.$id_categoria.'" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a> 
+              <button onclick="eliminar_categoria('.$id_categoria.');"class="btn btn-danger">Eliminar</button>';
           $arr_Categorias[$i]->options = $opciones;
        }
        $arr_Respuesta['status'] = true;
@@ -72,20 +72,20 @@ if($tipo == 'ver'){
 //clase 2
 
 if($tipo == "actualizar" ){
-    $id_producto = $_POST['id_producto'];
-    $nombree = $_POST['nombre'];
+    $id_categoria = $_POST['id_categoria'];
+    $nombre = $_POST['nombre'];
     $detalle = $_POST['detalle'];
     
-    if ($nombree == "" || $detalle == "" || $precio == "" || $categoria == "" || $proveedor == "") {
+    if ($nombre == "" || $detalle == "") {
         //repuesta
         $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacíos');
     } else {
-        $arrProducto = $objProducto->actualizarCategoria($id_producto, $nombre, $detalle);
-        if ($arrProducto->p_id > 0) {
+        $arrCategoria = $objCategoria->actualizarCategoria($id_categoria, $nombre, $detalle);
+        if ($arrCategoria->p_id > 0) {
             $arr_Respuesta = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
 
         } else {
-            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar producto');
+            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar categoria');
         }
     }
     echo json_encode($arr_Respuesta);

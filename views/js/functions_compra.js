@@ -125,6 +125,7 @@ async function ver_compra(id) {
         });
         json = await respuesta.json();
         if(json.status){
+            document.querySelector('#id_compra').value = json.contenido.id;
             document.querySelector('#id_producto').value = json.contenido.id_producto;
             document.querySelector('#cantidad').value = json.contenido.cantidad;
             document.querySelector('#precio').value = json.contenido.precio;
@@ -142,4 +143,20 @@ async function ver_compra(id) {
     }
 }
 
+//clase 2
+async function actualizar_compra() {
+    const datos = new FormData(frmActualizar);
+    try {
+        let respuesta = await fetch(base_url + 'controller/Compra.php?tipo=actualizar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        console.log(json);
+    } catch (e) {
+
+    }
+}
 

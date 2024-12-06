@@ -73,8 +73,8 @@ if ($tipo == "listar"){
           $id_producto = $arr_Productos[$i]->id;
           $producto = $arr_Productos[$i]->nombree;
           //localhost/editar-producto/2
-          $opciones = '<a href="'.BASE_URL.'editar-producto/'.$id_producto.'">Editar</a> 
-              <button onclick="eliminar_producto('.$id_producto.');">Eliminar</button>';
+          $opciones = '<a href="'.BASE_URL.'editar-producto/'.$id_producto.'" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a> 
+              <button onclick="eliminar_producto('.$id_producto.');" class="btn btn-danger">Eliminar</button>';
 
           $arr_Productos[$i]->options = $opciones;
        }

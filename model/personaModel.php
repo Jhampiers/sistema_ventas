@@ -52,6 +52,15 @@ class PersonaModel {
     return $sql;
    }
 
+    // clase final2
+  public function actualizarPersona($id,$nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia, 
+  $distrito, $codigo_postal, $direccion, $rol, $estado){
+    $sql = $this->conexion->query("CALL actualizarpersona('{$id}','{$nro_identidad}','{$razon_social}','{$telefono}','{ $correo}','{$departamento}','{$provincia}',
+    '{$distrito}','{$codigo_postal}','{$direccion}','{$rol}','{$estado}')");
+    $sql = $sql->fetch_object();
+    return $sql;
+  }
+
 
 
 }

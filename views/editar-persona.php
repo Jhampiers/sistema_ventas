@@ -1,6 +1,7 @@
 
 <div class="container form-nproduct">
-<form action="" id="frmRegistrar" class=" mb-4 border  p-3" style="margin-top:200px;">
+<form action="" id="frmActualizar" class=" mb-4 border  p-3" style="margin-top:200px;">
+<input type="hidden" name="id_persona" id="id_persona">
     <h4 class="text-center mb-4">Editar Persona</h4>
     <div>
         <label for=""> Nro identidad: </label>
@@ -49,7 +50,7 @@
     </div>
 
    
-    <button type="button" class="btn btn-primary mt-3" onclick="registrar_persona();">Actualizar</button>
+    <button type="button" class="btn btn-primary mt-3" onclick="actualizar_persona();">Actualizar</button>
     </div>
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_persona.js"></script>

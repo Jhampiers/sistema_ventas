@@ -1,6 +1,7 @@
 
 <div class="container form-nproduct p-5 mt-5">
-<form action="" id="frmRegistrar" class=" mb-4 border  p-3" style="margin-top:200px;">
+<form action="" id="frmActualizar" class=" mb-4 border  p-3" style="margin-top:200px;">
+<input type="hidden" name="id_compra" id="id_compra">
     <h4 class="text-center mb-4">Editar Compra</h4>
     <div>
         <label for=""> Producto: </label>
@@ -24,7 +25,7 @@
             
     </div>
    
-    <button type="button" class="btn btn-primary mt-3" onclick="registrar_compra();">Actualizar</button>
+    <button type="button" class="btn btn-primary mt-3" onclick="actualizar_compra();">Actualizar</button>
     </div>
 </form>
 <script src="<?php echo BASE_URL;?>views/js/functions_compra.js"></script>

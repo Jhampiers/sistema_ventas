@@ -110,6 +110,7 @@ async function ver_persona(id) {
         });
         json = await respuesta.json();
         if(json.status){
+            document.querySelector('#id_persona').value = json.contenido.id;
             document.querySelector('#nro_identidad').value = json.contenido.nro_identidad;
             document.querySelector('#razon_social').value = json.contenido.razon_social;
             document.querySelector('#telefono').value = json.contenido.telefono;
@@ -133,3 +134,21 @@ async function ver_persona(id) {
         
     }
 }
+
+//clase 2
+async function actualizar_persona() {
+    const datos = new FormData(frmActualizar);
+    try {
+        let respuesta = await fetch(base_url + 'controller/Persona.php?tipo=actualizar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        console.log(json);
+    } catch (e) {
+
+    }
+}
+

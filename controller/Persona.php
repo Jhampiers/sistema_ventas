@@ -57,8 +57,8 @@ if ($tipo=="listar"){
        for($i=0; $i < count($arr_Personas); $i++){
           $id_persona = $arr_Personas[$i]->id;
           $persona = $arr_Personas[$i]->rol;
-          $opciones = '<a href="'.BASE_URL.'editar-persona/'.$id_persona.'">Editar</a> 
-              <button onclick="eliminar_persona('.$id_persona.');">Eliminar</button>';
+          $opciones = '<a href="'.BASE_URL.'editar-persona/'.$id_persona.'" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a> 
+              <button onclick="eliminar_persona('.$id_persona.');" class="btn btn-danger">Eliminar</button>';
           $arr_Personas[$i]->options = $opciones;
        }
        $arr_Respuesta['status'] = true;
@@ -87,6 +87,43 @@ if($tipo == 'ver'){
     }
     echo json_encode($response);
 }
+
+//clase 2
+
+if($tipo == "actualizar" ){
+    $id_persona = $_POST['id_persona'];
+    $nro_identidad = $_POST['nro_identidad'];
+    $razon_social = $_POST['razon_social'];
+    $telefono = $_POST['telefono'];
+    $correo = $_POST['correo'];
+    $departamento= $_POST['departamento'];
+    $provincia= $_POST['provincia'];
+    $distrito= $_POST['distrito'];
+    $codigo_postal= $_POST['codigo_postal'];
+    $direccion= $_POST['direccion'];
+    $rol= $_POST['rol'];
+    $estado= $_POST['estado'];
+    if ($nro_identidad== "" || $razon_social == "" || $telefono == "" || $correo == "" || $departamento == "" || $provincia == ""  || $distrito == ""  || $codigo_postal== "" 
+    || $direccion == "" || $rol == "" || $estado == "") {
+        //repuesta
+        $arr_Respuesta = array('status' => false, 'mensaje' => 'Error, campos vacíos');
+    } else {
+        $arrPersona = $objPersona->actualizarPersona($id_persona, $nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia, 
+        $distrito, $codigo_postal, $direccion, $rol, $estado);
+        if ($arrPersona->p_id > 0) {
+            $arr_Respuesta = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
+
+        } else {
+            $arr_Respuesta = array('status' => false, 'mensaje' => 'Error al actualizar persona');
+        }
+    }
+    echo json_encode($arr_Respuesta);
+
+}
+if ($tipo == "eliminar") {
+    
+}
+
 
 ?>
 
