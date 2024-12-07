@@ -6,7 +6,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background: #f8f9fa;
+            background: #ffff;
             font-family: 'Poppins', sans-serif;
         }
 
@@ -165,32 +165,32 @@
     <div class="container-fluid py-5" style="margin-top: 150px; margin-bottom: 50px; background-color: #ffff;">
         <div class="container">
             <div class="welcome-section">
-                <h3>Bienvenido al panel Administrativo</h3>
+                <h3>Bienvenido al Panel Administrativo</h3>
                
             </div>
 
             <div class="row stats-container">
                 <div class="col-md-3">
                     <div class="stats-card">
-                        <h3>150</h3>
+                        <h3>16</h3>
                         <p>Productos Activos</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-card">
-                        <h3>12</h3>
+                        <h3>7</h3>
                         <p>Categorías</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-card">
-                        <h3>45</h3>
+                        <h3>13</h3>
                         <p>Usuarios</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-card">
-                        <h3>89</h3>
+                        <h3>13</h3>
                         <p>Compras este mes</p>
                     </div>
                 </div>
@@ -276,17 +276,7 @@
         </div>
     </div>
 
-    <div class="quick-actions">
-        <div class="action-button" title="Ayuda">
-            <i class="fas fa-question"></i>
-        </div>
-        <div class="action-button" title="Configuración">
-            <i class="fas fa-cog"></i>
-        </div>
-        <div class="action-button" title="Notificaciones">
-            <i class="fas fa-bell"></i>
-        </div>
-    </div>
+   
 
     <div class="py-4" style="background-color:#413FB6;">
     </div>
