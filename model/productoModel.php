@@ -51,5 +51,12 @@ class ProductoModel{
     return $sql;
   }
 
+  public function eliminarProducto($id){
+
+    $sql = $this->conexion->query("CALL eliminarproducto('{$id}')");
+    $sql = $sql->fetch_object();
+    return $sql;
+  }
+
 }
 ?>
