@@ -121,7 +121,21 @@ if($tipo == "actualizar" ){
 
 }
 if ($tipo == "eliminar") {
-    
+    // print_r($_POST);//todo codigo con print_r debe estar comentado
+    $id_persona = $_POST['id_persona'];
+    //funcion flecha para llamar a una funcion
+    $arr_Respuesta = $objPersona->eliminarPersona($id_persona);
+    // print_r($arr_Respuesta);
+    //si no hay ese producto con ese id 
+    if(empty($arr_Respuesta)){
+
+        $response = array('status'=>false);
+
+    }else{
+        $response = array('status'=>true);
+
+    }
+    echo json_encode($response);
 }
 
 

@@ -112,4 +112,43 @@ async function actualizar_categoria() {
     }
 }
 
+async function eliminar_categoria(id) {
 
+    swal({
+       title:"Realmente desea eliminar la categoria?",
+       text:"",
+       icon:"warning",
+       buttons: true,
+       dangerMode: true
+    }).then((willDelete)=>{
+       if(willDelete){
+           fnt_eliminar(id);
+       }
+
+    })
+}
+async function fnt_eliminar(id) {
+   // alert("producto eliminado: id=" + id );
+   const formData = new FormData();
+   formData.append('id_categoria', id);
+   try {
+       
+       let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=eliminar',{
+
+           method: 'POST',
+           mode: 'cors',
+           cache:'no-cache',
+           body:formData
+       });
+       json = await respuesta.json();
+       if(json.status){
+           swal("Eliminar", "eliminado correctamente", "success");
+           document.querySelector('#fila'+id).remove();
+       }else{
+           swal('Eliminar', 'Error al eliminar categoria', 'warning');
+           alert("error al eliminar");
+       }
+   } catch (e) {
+       console.log("ocurrio un error" + e);
+   }
+}
