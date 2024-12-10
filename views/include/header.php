@@ -13,14 +13,14 @@
     <script>
         const base_url = '<?php echo BASE_URL; ?>';
     </script>
-    
+
 </head>
 <script src="https://kit.fontawesome.com/f244ab63ac.js" crossorigin="anonymous"></script>
 
 <body>
 
-    <div class="container-fluid p-0 " >
-    <nav class="navbar navbar-dark fixed-top" style="background-color:#413FB6; min-height:150px;">
+    <div class="container-fluid p-0 ">
+        <nav class="navbar navbar-dark fixed-top" style="background-color:#413FB6; min-height:150px;">
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand d-none d-lg-block" href="<?php echo BASE_URL; ?>index">
@@ -60,12 +60,15 @@
                                     <i class="fas fa-caret-up fa-2x" style="margin-top: -16px;"></i>
                                 </div>
 
+                                <button class="btn btn-light d-flex align-items-center gap-2">
+                                    <i class="fas fa-user"></i>
+                                    <?php echo $_SESSION['sesion_ventas_nombres'] ?>
+                                </button>
+
                                 <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>login">
                                     <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
                                 </a>
-                                <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>register">
-                                    <i class="fas fa-user-plus me-2"></i>Registrarse
-                                </a>
+
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>Admin">
                                     <i class="fas fa-user-circle me-2"></i>Panel Admin
@@ -87,7 +90,7 @@
                             <i class="fas fa-sign-out-alt"></i>
                             <span class="ms-1">Cerrar Sesión</span>
                         </a>
-                        <button><?php echo $_SESSION['sesion_ventas_nombres']?></button>
+
                     </div>
                 </div>
 
