@@ -106,11 +106,11 @@ async function actualizar_categoria() {
             body: datos
         });
         json = await respuesta.json();
-        // if (json.status) {
-        //     swal("Actualizar", json.mensaje, "success");
-        // } else {
-        //     swal("Actualizar", json.mensaje, "error");
-        // }
+        if (json.status) {
+            swal("Actualizar", json.mensaje, "success");
+        } else {
+            swal("Actualizar", json.mensaje, "error");
+        }
 
         console.log(json);
 

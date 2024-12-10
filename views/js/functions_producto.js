@@ -176,6 +176,11 @@ async function actualizar_producto() {
             body: datos
         });
         json = await respuesta.json();
+        if (json.status) {
+            swal("Actualizar", json.mensaje, "success");
+        } else {
+            swal("Actualizar", json.mensaje, "error");
+        }
         console.log(json);
     } catch (e) {
 

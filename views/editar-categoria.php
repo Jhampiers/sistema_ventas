@@ -1,5 +1,5 @@
 
-<div class="container form-nproduct">
+<div class="container form-nproduct" style="margin-bottom: 120px;">
 <form action="" id="frmActualizar" class=" mb-4 border  p-3" style="margin-top:200px;">
 <input type="hidden" name="id_categoria" id="id_categoria">
     <h4 class="text-center mb-4">Editar Categoría</h4>

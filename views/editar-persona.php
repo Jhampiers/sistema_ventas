@@ -17,7 +17,7 @@
     </div>
     <div>
         <label for=""> correo: </label>
-            <input type="text" class="form-control" id="correo" name="correo" >
+            <input type="email" class="form-control" id="correo" name="correo" >
     </div>
     <div>
         <label for=""> departamento: </label>
