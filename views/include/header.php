@@ -65,9 +65,9 @@
                                     <?php echo $_SESSION['sesion_ventas_nombres'] ?>
                                 </button>
 
-                                <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>login">
+                                <!-- <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>login">
                                     <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
-                                </a>
+                                </a> -->
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item py-2" href="<?php echo BASE_URL ?>Admin">
