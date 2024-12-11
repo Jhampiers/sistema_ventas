@@ -24,7 +24,7 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand d-none d-lg-block" href="<?php echo BASE_URL; ?>index">
-                    <img src="./views/plantilla/img/logo.png" alt="Logo" width="350" height="100" class="d-inline-block align-top">
+                    <img src="<?php echo BASE_URL; ?>./views/plantilla/img/logo.png" alt="Logo" width="350" height="100" class="d-inline-block align-top">
                 </a>
 
                 <!-- Botón hamburguesa -->
