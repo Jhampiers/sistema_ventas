@@ -17,6 +17,11 @@ async function listar_personas() {
                 <td>${item.razon_social}</td>
                 <td>${item.telefono}</td>
                 <td>${item.correo}</td>
+                <td>${item.departamento}</td>
+                <td>${item.provincia}</td>
+                <td>${item.distrito}</td>
+                <td>${item.codigo_postal}</td>
+                <td>${item.direccion}</td>
                 <td>${item.rol}</td>
                  <td>${item.options}</td>
                 `;

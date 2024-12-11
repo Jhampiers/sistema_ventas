@@ -8,6 +8,11 @@
                     <th scope="col" class="align-middle">Nombre</th>
                     <th scope="col" class="align-middle">Telefono</th> 
                     <th scope="col" class="align-middle">Correo</th>
+                    <th scope="col" class="align-middle">Departamento</th>
+                    <th scope="col" class="align-middle">Provincia</th>
+                    <th scope="col" class="align-middle">Distrito</th>
+                    <th scope="col" class="align-middle">Codigo postal</th>
+                    <th scope="col" class="align-middle">Direccion</th>
                     <th scope="col" class="align-middle">Rol</th>
                     <th scope="col" class="align-middle">Acciones</th>
                 </tr>
