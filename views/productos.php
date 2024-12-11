@@ -6,6 +6,8 @@
                     <th scope="col" class="align-middle">Nro</th>
                     <th scope="col" class="align-middle">Código</th>
                     <th scope="col" class="align-middle">Nombre</th>
+                    <th scope="col" class="align-middle">Detalle</th>
+                    <th scope="col" class="align-middle">Precio</th>
                     <th scope="col" class="align-middle">Stock</th> 
                     <th scope="col" class="align-middle">Categoría</th>
                     <th scope="col" class="align-middle">Proveedor</th>

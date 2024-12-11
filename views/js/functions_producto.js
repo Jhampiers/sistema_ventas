@@ -15,6 +15,8 @@ async function listar_productos() {
                 <th>${cont}</th>
                 <td>${item.codigo}</td>
                 <td>${item.nombree}</td>
+                <td>${item.detalle}</td>
+                <td>${item.precio}</td>
                 <td>${item.stock}</td>
                 <td>${item.categoria.nombre}</td>
                 <td>${item.proveedor.razon_social}</td>
