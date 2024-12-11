@@ -1,6 +1,6 @@
 
-<div class="container form-nproduct" style="margin-bottom: 120px;">
-<form action="" id="frmRegistrar" class=" mb-4 border  p-3" style="margin-top:200px;">
+<div class="container form-nproduct" style="margin-bottom: 200px;">
+<form action="" id="frmRegistrar" class=" mb-4 border  p-3" style="margin-top:250px;">
     <h4 class="text-center mb-4">Registrar Categoría</h4>
     <div>
         <label for=""> nombre: </label>
