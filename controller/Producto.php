@@ -123,13 +123,13 @@ if($tipo == "actualizar" ){
         if ($arrProducto->p_id > 0) {
             $arr_Respuesta = array('status' => true, 'mensaje' => 'Actualizado Correctamente');
 
-            if ($_FILES['imagen']['tmp_name'] != "") {
+            if ($_FILES['imagen1']['tmp_name'] != "") {
                 unlink('../assets/img_productos/' . $img);
 
                 //cargar archivos
-                $archivo = $_FILES['imagen']['tmp_name'];
+                $archivo = $_FILES['imagen1']['tmp_name'];
                 $destino = '../assets/img_productos/';
-                $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
+                $tipoArchivo = strtolower(pathinfo($_FILES["imagen1"]["name"], PATHINFO_EXTENSION));
                 if (move_uploaded_file($archivo, $destino . '' . $id_producto.'.'.$tipoArchivo)) {
                 }
             }
