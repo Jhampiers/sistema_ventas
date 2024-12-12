@@ -47,12 +47,26 @@ class CategoriaModel{
     return $sql;
   }
 
-  public function eliminarCategoria($id){
+//   public function eliminarCategoria($id){
+
+//     $sql = $this->conexion->query("CALL eliminarcategoria('{$id}')");
+//     $sql = $sql->fetch_object();
+//     return $sql;
+//   }
+
+public function eliminarCategoria($id) {
 
     $sql = $this->conexion->query("CALL eliminarcategoria('{$id}')");
+    
     $sql = $sql->fetch_object();
+
+    if (isset($sql->mensaje) && $sql->mensaje === 'productos_registrados') {
+        return 'productos_registrados'; 
+    }
+
     return $sql;
-  }
+}
+
 
 }
 

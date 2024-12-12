@@ -134,28 +134,64 @@ async function eliminar_categoria(id) {
 
     })
 }
-async function fnt_eliminar(id) {
-   // alert("producto eliminado: id=" + id );
-   const formData = new FormData();
-   formData.append('id_categoria', id);
-   try {
+// async function fnt_eliminar(id) {
+//    // alert("producto eliminado: id=" + id );
+//    const formData = new FormData();
+//    formData.append('id_categoria', id);
+//    try {
        
-       let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=eliminar',{
+//        let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=eliminar',{
 
-           method: 'POST',
-           mode: 'cors',
-           cache:'no-cache',
-           body:formData
-       });
-       json = await respuesta.json();
-       if(json.status){
-           swal("Eliminar", "eliminado correctamente", "success");
-           document.querySelector('#fila'+id).remove();
-       }else{
-           swal('Eliminar', 'Error al eliminar categoria', 'warning');
-           alert("error al eliminar");
-       }
-   } catch (e) {
-       console.log("ocurrio un error" + e);
-   }
+//            method: 'POST',
+//            mode: 'cors',
+//            cache:'no-cache',
+//            body:formData
+//        });
+//        json = await respuesta.json();
+//        if(json.status){
+//            swal("Eliminar", "eliminado correctamente", "success");
+//            document.querySelector('#fila'+id).remove();
+//        }else{
+//            swal('Eliminar', 'Error al eliminar categoria', 'warning');
+//            alert("error al eliminar");
+//        }
+//    } catch (e) {
+//        console.log("ocurrio un error" + e);
+//    }
+// }
+
+async function fnt_eliminar(id) {
+    const formData = new FormData();
+    formData.append('id_categoria', id);
+
+    try {
+        let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=eliminar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData
+        });
+
+        let json = await respuesta.json();
+
+        if (json.status) {
+            swal("Eliminar", "Categoría eliminada correctamente", "success");
+            document.querySelector('#fila' + id).remove(); 
+        } else {
+
+            if (json.message && json.message === 'productos_registrados') {
+                swal('Aviso', 'Esta categoría no se puede eliminar porque tiene productos registrados', 'warning');
+            } else {
+                
+                swal('Eliminar', 'Error al eliminar categoria', 'warning');
+            }
+            // alert("Error al eliminar");
+        }
+    } catch (e) {
+        console.log("Ocurrió un error: " + e);
+        swal("Error", "Hubo un problema al intentar eliminar la categoría", "error");
+    }
 }
+
+
+

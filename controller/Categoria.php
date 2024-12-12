@@ -91,21 +91,39 @@ if($tipo == "actualizar" ){
     echo json_encode($arr_Respuesta);
 
 }
+// if ($tipo == "eliminar") {
+//     // print_r($_POST);//todo codigo con print_r debe estar comentado
+//     $id_categoria = $_POST['id_categoria'];
+//     //funcion flecha para llamar a una funcion
+//     $arr_Respuesta = $objCategoria->eliminarCategoria($id_categoria);
+//     // print_r($arr_Respuesta);
+//     //si no hay ese producto con ese id 
+//     if(empty($arr_Respuesta)){
+
+//         $response = array('status'=>false);
+
+//     }else{
+//         $response = array('status'=>true);
+
+//     }
+//     echo json_encode($response);
+// }
+
 if ($tipo == "eliminar") {
-    // print_r($_POST);//todo codigo con print_r debe estar comentado
     $id_categoria = $_POST['id_categoria'];
-    //funcion flecha para llamar a una funcion
+
     $arr_Respuesta = $objCategoria->eliminarCategoria($id_categoria);
-    // print_r($arr_Respuesta);
-    //si no hay ese producto con ese id 
-    if(empty($arr_Respuesta)){
 
-        $response = array('status'=>false);
+    if ($arr_Respuesta === 'productos_registrados') {
+        $response = array('status' => false, 'message' => 'productos_registrados');
+    } elseif (empty($arr_Respuesta)) {
 
-    }else{
-        $response = array('status'=>true);
-
+        $response = array('status' => false);
+    } else {
+        
+        $response = array('status' => true);
     }
+
     echo json_encode($response);
 }
 

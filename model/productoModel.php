@@ -52,6 +52,14 @@ class ProductoModel{
   }
 
   public function eliminarProducto($id){
+    // // Verificar si el producto está en alguna compra
+    // $sql = $this->conexion->query("SELECT COUNT(*) as cantidad FROM compras WHERE id_producto = '{$id}'");
+    // $compra = $sql->fetch_object();
+
+    // if ($compra->cantidad > 0) {
+    //     // Si el producto está registrado en compras, no lo eliminamos
+    //     return null;
+    // }
 
     $sql = $this->conexion->query("CALL eliminarproducto('{$id}')");
     $sql = $sql->fetch_object();
