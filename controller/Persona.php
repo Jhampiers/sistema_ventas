@@ -138,6 +138,36 @@ if ($tipo == "eliminar") {
     echo json_encode($response);
 }
 
+// if ($tipo == "eliminar") {
+//     $id_persona = $_POST['id_persona'];
+
+//     // Primero, obtenemos el rol de la persona (que puede ser 'proveedor' o 'trabajador')
+//     $sql = $this->conexion->query("SELECT rol FROM persona WHERE id = {$id_persona}");
+//     $persona = $sql->fetch_object();
+
+//     // Si no encontramos la persona, podemos omitir esta verificación si sabes que el ID siempre será válido
+
+//     // Obtenemos el rol de la persona
+//     $rol = $persona->rol;  // 'proveedor' o 'trabajador'
+
+//     // Llamamos a la función del modelo para eliminar la persona según su rol
+//     $arr_Respuesta = $objPersona->eliminarPersona($id_persona, $rol);
+
+//     // Dependiendo del resultado, devolvemos un mensaje adecuado
+//     if ($arr_Respuesta === 'productos_asociados') {
+//         $response = array('status' => false, 'message' => 'productos_asociados');
+//     } elseif ($arr_Respuesta === 'compras_asociadas') {
+//         $response = array('status' => false, 'message' => 'compras_asociadas');
+//     } elseif (empty($arr_Respuesta)) {
+//         $response = array('status' => false);
+//     } else {
+//         $response = array('status' => true);
+//     }
+
+//     echo json_encode($response);
+// }
+
+
 
 ?>
 

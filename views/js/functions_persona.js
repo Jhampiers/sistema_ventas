@@ -202,3 +202,38 @@ async function fnt_eliminar(id) {
        console.log("ocurrio un error" + e);
    }
 }
+
+
+// async function fnt_eliminar(id) {
+//     const formData = new FormData();
+//     formData.append('id_persona', id);
+
+//     try {
+//         let respuesta = await fetch(base_url + 'controller/Persona.php?tipo=eliminar', {
+//             method: 'POST',
+//             mode: 'cors',
+//             cache: 'no-cache',
+//             body: formData
+//         });
+
+//         let json = await respuesta.json();
+
+//         if (json.status) {
+//             swal("Eliminar", "Usuario eliminado correctamente", "success");
+//             document.querySelector('#fila' + id).remove(); 
+//         } else {
+//             // Verificamos el mensaje de error para los casos de asociación
+//             if (json.message === 'productos_asociados') {
+//                 swal('Aviso', 'Este usuario no se puede eliminar porque está asociado con un producto', 'warning');
+//             } else if (json.message === 'compras_asociadas') {
+//                 swal('Aviso', 'Este usuario no se puede eliminar porque está asociado con una compra', 'warning');
+//             } else {
+//                 swal('Eliminar', 'Error al eliminar usuario', 'warning');
+//             }
+//         }
+//     } catch (e) {
+//         console.log("Ocurrió un error: " + e);
+//         swal("Error", "Hubo un problema al intentar eliminar el usuario", "error");
+//     }
+// }
+
