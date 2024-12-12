@@ -204,28 +204,61 @@ async function eliminar_producto(id) {
 
      })
 }
+// async function fnt_eliminar(id) {
+//     // alert("producto eliminado: id=" + id );
+//     const formData = new FormData();
+//     formData.append('id_producto', id);
+//     try {
+        
+//         let respuesta = await fetch(base_url + 'controller/Producto.php?tipo=eliminar',{
+
+//             method: 'POST',
+//             mode: 'cors',
+//             cache:'no-cache',
+//             body:formData
+//         });
+//         json = await respuesta.json();
+//         if(json.status){
+//             swal("Eliminar", "eliminado correctamente", "success");
+//             document.querySelector('#fila'+id).remove();
+//         }else{
+//             swal('Eliminar', 'Error al eliminar producto', 'warning');
+//             alert("error al eliminar");
+//         }
+//     } catch (e) {
+//         console.log("ocurrio un error" + e);
+//     }
+// }
+
 async function fnt_eliminar(id) {
-    // alert("producto eliminado: id=" + id );
     const formData = new FormData();
     formData.append('id_producto', id);
-    try {
-        
-        let respuesta = await fetch(base_url + 'controller/Producto.php?tipo=eliminar',{
 
+    try {
+        let respuesta = await fetch(base_url + 'controller/Producto.php?tipo=eliminar', {
             method: 'POST',
             mode: 'cors',
-            cache:'no-cache',
-            body:formData
+            cache: 'no-cache',
+            body: formData
         });
-        json = await respuesta.json();
-        if(json.status){
-            swal("Eliminar", "eliminado correctamente", "success");
-            document.querySelector('#fila'+id).remove();
-        }else{
-            swal('Eliminar', 'Error al eliminar producto', 'warning');
-            alert("error al eliminar");
+
+        let json = await respuesta.json();
+
+        if (json.status) {
+            swal("Eliminar", "Producto eliminado correctamente", "success");
+            document.querySelector('#fila' + id).remove(); 
+        } else {
+
+            if (json.message && json.message === 'compras_registrados') {
+                swal('Aviso', 'Este producto no se puede eliminar porque tiene compras registrados', 'warning');
+            } else {
+                
+                swal('Eliminar', 'Error al eliminar producto', 'warning');
+            }
+            // alert("Error al eliminar");
         }
     } catch (e) {
-        console.log("ocurrio un error" + e);
+        console.log("Ocurrió un error: " + e);
+        swal("Error", "Hubo un problema al intentar eliminar el producto", "error");
     }
 }
