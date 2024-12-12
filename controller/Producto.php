@@ -131,6 +131,7 @@ if($tipo == "actualizar" ){
                 $destino = '../assets/img_productos/';
                 $tipo_archivo = strtolower(pathinfo($_FILES["imagen1"]["name"], PATHINFO_EXTENSION));
                 if (move_uploaded_file($archivo, $destino . '' . $id_producto.'.'.$tipo_archivo)) {
+                    
                 }
             }
         } else {
@@ -138,7 +139,7 @@ if($tipo == "actualizar" ){
         }
     }
     echo json_encode($arr_Respuesta);
-
+    // echo $img;
 }
 if ($tipo == "eliminar") {
       // print_r($_POST);//todo codigo con print_r debe estar comentado

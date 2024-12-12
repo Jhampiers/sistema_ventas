@@ -154,7 +154,7 @@ async function ver_producto(id) {
             document.querySelector('#categoria').value = json.contenido.id_categoria;
             // document.querySelector('#imagen1').value = json.contenido.imagen1;
             document.querySelector('#proveedor').value = json.contenido.id_proveedor;
-            document.querySelector('#img').value = json.contenido.imagen;
+            document.querySelector('#img').value = json.contenido.imagen1;
          
         }else{
             window.location = base_url + "productos";
