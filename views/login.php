@@ -1,69 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar sesión</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-  <script> const base_url = '<?php echo BASE_URL; ?>';</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/css/login.css">
+    <script> const base_url = '<?php echo BASE_URL; ?>';</script>
+ 
 </head>
-
-<body class="bg-light">
-  <div class="container d-flex justify-content-center align-items-center p-5" style="height: 130vh;">
-    <div class="card shadow-lg border-0 rounded-4 text-white"
-      style="width: 100%; max-width: 400px; background-color: #413FB6;">
-      <div class="card-body p-4">
-        <!-- Sección del logo -->
-        <div class="text-center mb-4">
-        <img src="./views/plantilla/img/logo.png" alt="Logo" class="img-fluid" style="max-width:270px;height:80px;;">
+<body>
+   
+    <div class="login-container">
+        <div class="login-header">
+            <i class="fas fa-user-circle"></i>
+            <span>Iniciar Sesión</span>
         </div>
-        <!-- Título del formulario -->
-        <h5 class="card-title text-center text-white fw-bold mb-4">¡Bienvenido a Novatec!</h5>
         <form id="frm_iniciar_sesion">
-          <!-- Campo Usuario -->
-          <div class="mb-3">
-            <label for="usuario" class="form-label">Usuario</label>
-            <div class="input-group">
-              <span class="input-group-text bg-light">
-                <i class="bi bi-person-fill text-muted"></i>
-              </span>
-              <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Introduce tu usuario"
-                required>
+            <div class="form-group">
+                <label for="usuario">USUARIO</label>
+                <input type="text" id="usuario" name="usuario"  placeholder="Ingrese su usuario" required>
+                <i class="fas fa-user"></i>
             </div>
-          </div>
-
-          <!-- Campo Contraseña -->
-          <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <div class="input-group">
-              <span class="input-group-text bg-light">
-                <i class="bi bi-lock-fill text-muted"></i>
-              </span>
-              <input type="password" class="form-control" id="password" name="password"
-                placeholder="Introduce tu contraseña" required>
+            <div class="form-group">
+                <label for="password">CONTRASEÑA</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                <i class="fas fa-lock"></i>
             </div>
-          </div>
-
-          <!-- Botones -->
-          <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-light text-primary">Iniciar sesión</button>
-            <a href="#" class="btn btn-link text-white text-decoration-none">¿Olvidaste tu contraseña?</a>
-          </div>
+            <button type="submit" class="login-btn">
+                Ingresar <i class="fas fa-arrow-right"></i>
+            </button>
         </form>
-      </div>
+        <div class="forgot-password">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
     </div>
-  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
 </body>
-
 </html>
 
 
